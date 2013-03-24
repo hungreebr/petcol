@@ -9,11 +9,11 @@ gem 'simple_form'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-gem 'sqlite3'
+	gem 'sqlite3'
 end
 
 group :producion do
-gem 'pg'
+	gem 'pg'
 end
 
 
