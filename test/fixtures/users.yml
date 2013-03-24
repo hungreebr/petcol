@@ -3,3 +3,9 @@ sergio:
   last_name: "Oliveira"
   email: "sergiodiogof@gmail.com"
   profile_name: "sergiodiogo"
+  
+jim:
+ first_name: "Jim"
+ last_name: "Carey"
+ email: "jim@carey.com"
+ profile_name: "jim_carrey"
