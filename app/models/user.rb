@@ -11,12 +11,12 @@ class User < ActiveRecord::Base
   
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :profile_name, presence: true, 
-						   uniqueness: true,
-						   format: {
-							with: /a-zA-Z0-9/,
-							message: "Deve ser formatado corretamente"
-							}
+  validates :profile_name, presence: true,
+                           uniqueness: true,
+                           format: {
+                             with: /^[a-zA-Z0-9_-]+$/,
+                             message: 'Deve ser formatado corretamente'
+                           }
 						
   has_many :statuses
   
