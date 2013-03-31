@@ -1,5 +1,7 @@
 Petcol::Application.routes.draw do
-  get "profiles/show"
+  resources :pets
+
+
 
   devise_for :users
 
@@ -9,11 +11,16 @@ Petcol::Application.routes.draw do
 	get 'logout', to: 'devise/sessions#destroy', as: :logout
   end
   
-  resources :statuses
+  resources :statuses 	
   get 'feed', to: 'statuses#index', as: :feed
   root to: 'statuses#index'
 
-  get '/:id', to: 'profiles#show'
+  
+  get 'home', to: 'static_pages#index', as: :home
+  get 'profile', to: 'profiles#show', as: :profile
+
+  
+  #get '/:id', to: 'profiles#show'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

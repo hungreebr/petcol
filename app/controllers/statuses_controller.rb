@@ -27,7 +27,8 @@ class StatusesController < ApplicationController
   # GET /statuses/new.json
   def new
     @status = Status.new
-
+	@author_id = current_user.id
+	
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @status }
@@ -37,6 +38,7 @@ class StatusesController < ApplicationController
   # GET /statuses/1/edit
   def edit
     @status = Status.find(params[:id])
+	@author_id = current_user.id
   end
 
   # POST /statuses
@@ -44,6 +46,7 @@ class StatusesController < ApplicationController
   def create
     @status = Status.new(params[:status])
 
+	
     respond_to do |format|
       if @status.save
         format.html { redirect_to @status, notice: 'Status was successfully created.' }

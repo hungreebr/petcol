@@ -1,0 +1,51 @@
+﻿
+ <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+            <h1>Olá, <%= current_user.first_name %>!</h1>
+            <p>Esta é a página principal do usuário. <br>Clique no botão abaixo para criar o perfil do seu animal</p>
+            <p><%= link_to "Adicionar Pet", new_pet_path, class: "btn btn-primary btn-large" %></p>
+          </div>
+		  <% @pet.each do |pet| %>
+          <div class="status">
+  <div class="row">
+    <div class="span1">
+      IMG
+    </div>
+    <div class="span7">
+      <strong><%= pet.user.full_name %></strong>
+      <p><%= pet.name %></p>
+      <div class="meta">
+        <%= link_to time_ago_in_words(status.updated_at) + " ago", status %> 
+        <span class="admin">
+          | <%= link_to "Edit", edit_pet_path(pet) %> | 
+          <%= link_to "Delete", pet, method: :delete, data: { confirm: "Are you sure your want to delete this status?"} %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

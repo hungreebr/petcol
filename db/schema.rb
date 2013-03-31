@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130323205915) do
+ActiveRecord::Schema.define(:version => 20130330235846) do
+
+  create_table "pets", :force => true do |t|
+    t.string   "name"
+    t.date     "birthday"
+    t.string   "animal"
+    t.string   "breed"
+    t.string   "gender"
+    t.string   "hobbies"
+    t.text     "description"
+    t.binary   "photo"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+  end
+
+  add_index "pets", ["user_id"], :name => "index_pets_on_user_id"
 
   create_table "statuses", :force => true do |t|
     t.text     "content"

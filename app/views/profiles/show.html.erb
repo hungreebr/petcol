@@ -1,13 +1,53 @@
-﻿<div class="page-header">
-	<h1><%= @user.full_name %></h1>
-</div>	
+﻿<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+            <h1>Olá, <%= current_user.first_name %>!</h1>
+            <p>Esta é a página principal do usuário. <br>Clique no botão abaixo para criar o perfil do seu animal</p>
+            <p><%= link_to "Adicionar Pet", new_pet_path, class: "btn btn-primary btn-large" %></p>
+          </div>	
 
-<% if @statuses %>
-	<% @statuses.each do |status| %>
+<% if @pets %>
+	<% @pets.each do |pet| %>
+	<div class="row-fluid">
+	<div class="span4">
+	<%= image_tag  pet.avatar.url(:medium) %>
+	</div>
+	<div class="span8">
 		<div class="well">
-			<%= status.content %>
+			<p>Nome: <%= pet.name %></p>
+			<p>Sexo: <%= pet.gender %></p>
+			<p>Raça: <%= pet.breed %></p>
+			<p>Data de Nascimento: <%= pet.birthday %></p>
+			<p>Hobbies: <%= pet.hobbies %></p>
+			<p>Descrição: <%= pet.description %></p>
 			<hr />
-			<%= link_to time_ago_in_words(status.created_at), status_path(status) %> atrás.
+			<%= link_to time_ago_in_words(pet.created_at), pet_path(pet) %> atrás.
 			</div>
+	</div>		
+	</div>		
 	<% end %>
 <% end %>
+

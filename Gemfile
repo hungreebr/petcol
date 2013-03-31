@@ -4,6 +4,8 @@ gem 'rails', '3.2.9'
 gem 'bootstrap-sass'
 gem 'devise' 
 gem 'simple_form'
+gem 'paperclip'
+gem 'carrierwave'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
