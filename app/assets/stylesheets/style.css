@@ -2959,9 +2959,11 @@ Login page
   padding-top: 20px;  
   padding-bottom: 15px; 
 }
-
- a {
+.forget-password p {
 color: #fff;
+}
+.forget-password p > a {
+color: #637CA4;
 }
 
 

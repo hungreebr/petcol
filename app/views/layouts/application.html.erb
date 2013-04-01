@@ -11,7 +11,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<a href="#" class="brand">Petcol</a>
+			<a href="#" class="brand">PetBit</a>
 			<ul class="nav">
 				<li><%= link_to "Meus Pets", profile_path %></li>
 			</ul>	
@@ -33,7 +33,7 @@
 <div class="container">
 	<% flash.each do |type, message| %>
 		<div class="alert <%= flash_class type %>">
-			<button class="close" data-dismiss="alert">x</button> 
+			<button class="close" data-dismiss="alert"> x</button> 
 			<%= message %>
 		</div>
 	<% end %>
