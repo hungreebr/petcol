@@ -2880,6 +2880,7 @@ Login page
 
 .login .content h3 {
   color: #fff;
+  font-size: 1.5em; 
 }
 .login .content h4  {
   color: #555;
@@ -2943,11 +2944,6 @@ Login page
   margin-top: 1px;
 }
 
-.login .content .forget-password {
-  margin-top: 25px;
-  background-color: #294A73;
-}
-
 .login .copyright {
   text-align: center;
   width: 250px;
@@ -2956,6 +2952,21 @@ Login page
   color: #999;
   font-size: 11px;
 }
+
+.forget-password {
+  background-color:#21355A; 
+  width: 451px;
+  margin: 0 auto; 
+  padding: 30px;  
+  padding-top: 20px;  
+  padding-bottom: 15px; 
+  filter:glow(strength=5, color=#000000,enabled=1)  
+}
+
+ a {
+color: #fff !important;
+}
+
 
 
 /***
