@@ -2874,7 +2874,6 @@ Login page
   padding: 30px;  
   padding-top: 20px;  
   padding-bottom: 15px; 
-  filter:glow(strength=5, color=#000000,enabled=1)  
 }
 
 .login .content h3 {
@@ -2959,11 +2958,10 @@ Login page
   padding: 30px;  
   padding-top: 20px;  
   padding-bottom: 15px; 
-  filter:glow(strength=5, color=#000000,enabled=1)  
 }
 
  a {
-color: #fff !important;
+color: #fff;
 }
 
 
