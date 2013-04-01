@@ -3103,7 +3103,7 @@ Choosen plugin css changes
 
 .chzn-container-multi .chzn-choices .search-choice.search-choice-disabled {
   background-image: none !important;
- `filter:none !important;
+ filter:none !important;
 }
 
 .chzn-container-multi .chzn-choices {
