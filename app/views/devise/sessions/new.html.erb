@@ -1,21 +1,67 @@
-﻿
-<div class="row">
-<div class="span4">
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class:"well"}) do |f| %>
+﻿<!-- BEGIN BODY -->
+<body class="login">
+  <!-- BEGIN LOGO -->
+  <div class="logo">
+    <img src="assets/logopet.png" alt="" /> 
+  </div>
+  <!-- END LOGO -->
+  <!-- BEGIN LOGIN -->
+  <div class="content">
+    <!-- BEGIN LOGIN FORM -->
+      <h3 class="form-title">Conecte-se e mostre seu pet para o mundo!</h3>
+
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class:"form-vertical login-form"}) do |f| %>
   <fieldset>
-  <legend> Login </legend>
-  <%= f.input :email %>
-  <%= f.input :password %>
+  <%= f.input :email, input_html: { class: 'm-wrap' }, label_html: { style: 'font-color: #fff' }  %>
+  <%= f.input :password, input_html: { class: 'm-wrap' }, label_html: { style: 'font-color: #fff' }   %>
   
-<% if devise_mapping.rememberable? -%>
-<div><%= f.input :remember_me, as: :boolean %></div>
-  <% end -%>
+
 
 <div><%= f.button :submit, "Login" %></div>
 </fieldset>
 <% end %>
 
 <%= render "devise/shared/links" %>
+      <div class="forget-password">
+        <h4>Esqueceu a senha?</h4>
+        <p>
+          Não se preocupe, clique <a href="users/password/new" class="" id="forget-password">aqui</a>
+          para recuperar a senha.
+        </p>
+      </div>
+    </form>
+    <!-- END LOGIN FORM -->        
+    <!-- BEGIN FORGOT PASSWORD FORM -->
+    <form class="form-vertical forget-form" action="index.html" />
+      <h3 class="">Esqec</h3>
+      <p>Enter your e-mail address below to reset your password.</p>
+      <div class="control-group">
+        <div class="controls">
+          <div class="input-icon left">
+            <i class="icon-envelope"></i>
+            <input class="m-wrap" type="text" placeholder="Email" />
+          </div>
+        </div>
+      </div>
+      <div class="form-actions">
+        <a href="javascript:;" id="back-btn" class="btn">
+        <i class="m-icon-swapleft"></i>  Back
+        </a>
+        <a href="javascript:;" id="forget-btn" class="btn green pull-right">
+        Submit <i class="m-icon-swapright m-icon-white"></i>
+        </a>            
+      </div>
+    </form>
+    <!-- END FORGOT PASSWORD FORM -->
+  </div>
+  <!-- END LOGIN -->
+  <!-- BEGIN COPYRIGHT -->
+  <div class="copyright">
+    2013 &copy; Todos os Direitos Reservados
+  </div>
+  <!-- END COPYRIGHT -->
+ 
+
 </div>
 <div class="span8">
 	<h2> O login é fácil e seguro </h2>
