@@ -2869,18 +2869,12 @@ Login page
 }  
 
 .login .content {
-background: rgb(255, 255, 255);
-background: -moz-linear-gradient(270deg, rgb(255, 255, 255) 67%, rgb(200, 200, 200) 88%);
-background: -webkit-linear-gradient(270deg, rgb(255, 255, 255) 67%, rgb(200, 200, 200) 88%);
-background: -o-linear-gradient(270deg, rgb(255, 255, 255) 67%, rgb(200, 200, 200) 88%);
-background: -ms-linear-gradient(270deg, rgb(255, 255, 255) 67%, rgb(200, 200, 200) 88%);
-background: linear-gradient(0deg, rgb(255, 255, 255) 67%, rgb(200, 200, 200) 88%);
-
+  background-color:#fff; 
   width: 451px;
-  
-  margin-bottom: 5px;
+  margin: 0 auto; 
   padding: 30px;  
   padding-top: 20px;  
+  padding-bottom: 15px; 
   border-radius: 15px;
   box-shadow: 10px #000;
 }
@@ -2912,26 +2906,6 @@ background: linear-gradient(0deg, rgb(255, 255, 255) 67%, rgb(200, 200, 200) 88%
 .login-form .input-bg { 
 width: 249px;
 color: #000;
-}
-
-.login-form .enviarbtn { 
-color: rgb(230, 230, 230);
-font-size: 18px;
-padding: 18px;
-text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
--webkit-border-radius: 48px;
--moz-border-radius: 48px;
-border-radius: 48px;
-background: rgb(65, 124, 214);
-background: -moz-linear-gradient(90deg, rgb(65, 124, 214) 30%, rgb(73, 165, 252) 70%);
-background: -webkit-linear-gradient(90deg, rgb(65, 124, 214) 30%, rgb(73, 165, 252) 70%);
-background: -o-linear-gradient(90deg, rgb(65, 124, 214) 30%, rgb(73, 165, 252) 70%);
-background: -ms-linear-gradient(90deg, rgb(65, 124, 214) 30%, rgb(73, 165, 252) 70%);
-background: linear-gradient(0deg, rgb(65, 124, 214) 30%, rgb(73, 165, 252) 70%);
--webkit-box-shadow: -2px 1px 4px rgba(42, 74, 123, 0.75);
--moz-box-shadow:    -2px 1px 4px rgba(42, 74, 123, 0.75);
-box-shadow:         -2px 1px 4px rgba(42, 74, 123, 0.75);
-
 }
 
 .login-form  input:focus {
@@ -2997,17 +2971,17 @@ box-shadow:         -2px 1px 4px rgba(42, 74, 123, 0.75);
 .forget-password {
   background-color:#21355A; 
   width: 451px;
-  margin-top: -18px; 
+  margin: 0 auto;
+  margin-top: -10px; 
   padding: 30px;  
   padding-top: 20px;  
-  padding-bottom: 15px;
-  -moz-border-radius-bottomright: 15px;
+  padding-bottom: 15px; 
+-moz-border-radius-bottomright: 15px;
 -webkit-border-bottom-right-radius: 15px;
 border-bottom-right-radius: 15px;
 -moz-border-radius-bottomleft: 15px;
 -webkit-border-bottom-left-radius: 15px;
 border-bottom-left-radius: 15px;
-
 }
 .forget-password p {
 color: #fff;
