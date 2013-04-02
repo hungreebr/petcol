@@ -1,9 +1,7 @@
 class StaticPagesController < ApplicationController
 
 	def index
-		respond_to do |format|
-		format.html # index.html.erb
-	end
+		render :login => 'devise/sessions#new'
 	 end
 	def profile
 	
