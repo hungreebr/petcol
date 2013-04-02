@@ -8,7 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
+<% if user_signed_in? %>
+ <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
 			<a href="#" class="brand">PetBit</a>
@@ -29,6 +30,8 @@
 		</div>
 	</div>
 </div>
+<% else %>
+<% end %>
 	
 <div class="container">
 	<% flash.each do |type, message| %>

@@ -2895,10 +2895,23 @@ Login page
     margin: 0px;
 }
 
-.login .content .m-wrap {
+.login .content .login-form .m-wrap {
   width: 249px;
-  background-color: #294A73;
+  background-color: #fff;
+  color: #fff;
 }
+.login-form .input-bg { 
+width: 249px;
+color: #fff;
+}
+
+.login-form  input:focus {
+    box-shadow: 0 0 15px rgba(0, 0, 255, 1);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, 1); 
+} 
+
+
 
 .login .content .input-icon {
   border-left: 2px solid #35aa47 !important;
