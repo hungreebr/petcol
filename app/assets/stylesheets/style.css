@@ -2979,9 +2979,9 @@ color: #000;
   -moz-border-radius-bottomright: 15px;
 -webkit-border-bottom-right-radius: 15px;
 border-bottom-right-radius: 15px;
--moz-border-radius-bottomleft: 1px;
--webkit-border-bottom-left-radius: 1px;
-border-bottom-left-radius: 1px;
+-moz-border-radius-bottomleft: 15px;
+-webkit-border-bottom-left-radius: 15px;
+border-bottom-left-radius: 15px;
 }
 .forget-password p {
 color: #fff;
