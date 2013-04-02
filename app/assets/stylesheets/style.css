@@ -2869,16 +2869,18 @@ Login page
 }  
 
 .login .content {
-  background-color:#395A9D; 
+  background-color:#fff; 
   width: 451px;
   margin: 0 auto; 
   padding: 30px;  
   padding-top: 20px;  
   padding-bottom: 15px; 
+  border-radius: 30px;
+  box-shadow: 10px #000;
 }
 
 .login .content h3 {
-  color: #fff;
+  color: #000;
   font-size: 1.5em; 
 }
 .login .content h4  {
@@ -2898,11 +2900,11 @@ Login page
 .login .content .login-form .m-wrap {
   width: 249px;
   background-color: #fff;
-  color: #fff;
+  color: #000;
 }
 .login-form .input-bg { 
 width: 249px;
-color: #fff;
+color: #000;
 }
 
 .login-form  input:focus {
