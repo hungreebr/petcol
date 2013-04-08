@@ -33,7 +33,8 @@
 	<% @pets.each do |pet| %>
 	<div class="row-fluid">
 	<div class="span4">
-	<%= image_tag  pet.avatar.url(:medium) %>
+	<%= image_tag pet.pet_image_url %>
+
 	</div>
 	<div class="span8">
 		<div class="well">

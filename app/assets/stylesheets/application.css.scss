@@ -8,12 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require jquery.Jcrop
  *= require_self
  *= require_tree .
  */
  body { padding-top: 60px; }
  .content {
-  background-color: #eee;
+  background-color: #FFF;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 0 0 6px 6px;

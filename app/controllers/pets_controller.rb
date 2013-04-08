@@ -43,34 +43,33 @@ class PetsController < ApplicationController
   # POST /pets.json
   def create
     @pet = Pet.new(params[:pet])
-
-    respond_to do |format|
-      if @pet.save
-        format.html { redirect_to @pet, notice: 'Pet was successfully created.' }
-        format.json { render json: @pet, status: :created, location: @pet }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @pet.errors, status: :unprocessable_entity }
-      end
-    end
+		if @pet.save
+			if params[:pet][:pet_image].present?
+				render :crop	
+			else
+				redirect_to @pet, notice: "Novo pet cadastrado com sucesso!"
+			end
+		else
+			render :new
   end
+end
+     
 
   # PUT /pets/1
   # PUT /pets/1.json
   def update
     @pet = Pet.find(params[:id])
 
-    respond_to do |format|
-      if @pet.update_attributes(params[:pet])
-        format.html { redirect_to @pet, notice: 'Pet was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @pet.errors, status: :unprocessable_entity }
-      end
-    end
+	if @pet.update_attributes(params[:pet])
+		if params[:pet][:pet_image].present?
+				render :crop	
+			else
+				redirect_to @pet, notice: "Cadastro atualizado com sucesso!"
+			end
+		else
+			render :new
   end
-
+end
   # DELETE /pets/1
   # DELETE /pets/1.json
   def destroy

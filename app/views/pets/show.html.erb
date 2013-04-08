@@ -33,10 +33,10 @@
 
 <p>
   <b>Photo:</b>
-  <%= @pet.photo %>
+  <%= @pet.pet_image %>
 </p>
-<%= image_tag  @pet .avatar.url %>
-<%= image_tag  @pet .avatar.url(:medium) %>
+  <%= image_tag @pet.pet_image(:thumb) if @pet.pet_image? %>
+
 
 
 <%= link_to 'Edit', edit_pet_path(@pet) %> |

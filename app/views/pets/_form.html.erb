@@ -1,4 +1,4 @@
-<%= simple_form_for(@pet) do |f| %>
+<%= simple_form_for @pet, input_html: { multipart: true } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -9,7 +9,7 @@
     <%= f.input :gender %>
     <%= f.input :hobbies %>
     <%= f.input :description, as: :text %>
-	<%= f.input :avatar %>
+    <%= f.input :pet_image, as: :file %>
   </div>
 
   <div class="form-actions">

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130330235846) do
+ActiveRecord::Schema.define(:version => 20130408024713) do
 
   create_table "pets", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20130330235846) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "pet_image"
   end
 
   add_index "pets", ["user_id"], :name => "index_pets_on_user_id"
