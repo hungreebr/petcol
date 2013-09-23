@@ -1,8 +1,7 @@
 # encoding: utf-8
 
 class PetpicUploader < CarrierWave::Uploader::Base
-
-  include CarrierWave::RMagick
+include CarrierWave::RMagick
 
   storage :file
 
@@ -13,8 +12,6 @@ class PetpicUploader < CarrierWave::Uploader::Base
   version :thumb do
     process :resize_to_limit => [200, 200]
   end
-
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick

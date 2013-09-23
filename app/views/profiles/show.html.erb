@@ -1,35 +1,11 @@
-﻿<div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
+﻿<div class="container">
+ <div>
           <div class="hero-unit">
             <h1>Olá, <%= current_user.first_name %>!</h1>
             <p>Esta é a página principal do usuário. <br>Clique no botão abaixo para criar o perfil do seu animal</p>
             <p><%= link_to "Adicionar Pet", new_pet_path, class: "btn btn-primary btn-large" %></p>
           </div>	
 
-<% if @pets %>
 	<% @pets.each do |pet| %>
 	<div class="row-fluid">
 	<div class="span4">
@@ -38,17 +14,17 @@
 	</div>
 	<div class="span8">
 		<div class="well">
-			<p>Nome: <%= pet.name %></p>
-			<p>Sexo: <%= pet.gender %></p>
-			<p>Raça: <%= pet.breed %></p>
-			<p>Data de Nascimento: <%= pet.birthday %></p>
-			<p>Hobbies: <%= pet.hobbies %></p>
-			<p>Descrição: <%= pet.description %></p>
+			<p><%= pet.name %></p>
+			<p><%= pet.breed %></p>
+			<p><%= pet.birthday %></p>
 			<hr />
-			<%= link_to time_ago_in_words(pet.created_at), pet_path(pet) %> atrás.
+			<%= link_to 'Ver Perfil', pet_path(pet) %><br>
+			<%= link_to 'Editar Perfil', edit_pet_path(pet) %><br>
+			<%= link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
 			</div>
 	</div>		
 	</div>		
 	<% end %>
-<% end %>
+	
 
+</div>

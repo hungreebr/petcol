@@ -1,5 +1,20 @@
+
+
 <p id="notice"><%= notice %></p>
 
+      	<img src="<%= @pet.pet_image %>" alt="" class="circular" />
+
+     		<h1>   <%= @pet.name %></h1>
+      	<div class="span9" id="header_subtitle" >
+      		<h2>Em busca do osso perfeito!</h2>
+      	</div>
+	</div>	  
+  </div>            
+</div>
+
+</div>
+
+<div style="visibility:hidden">
 <p>
   <b>Name:</b>
   <%= @pet.name %>
@@ -35,9 +50,11 @@
   <b>Photo:</b>
   <%= @pet.pet_image %>
 </p>
-  <%= image_tag @pet.pet_image(:thumb) if @pet.pet_image? %>
 
 
+</div>
 
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_pet_path(@pet) %> |
 <%= link_to 'Back', pets_path %>
+<% end %>

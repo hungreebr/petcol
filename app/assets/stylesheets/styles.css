@@ -1,0 +1,507 @@
+html {
+  background-image: url(bg.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+
+}
+body {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  max-width: 990px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+h1 {
+  position: static;
+  bottom: -173px;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10px 0px;
+  background-image: none;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+  text-align: center;
+}
+h2 {
+  margin: 10px 0px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.bgmain {
+  height: 300px;
+  background-image: url(561453_472909459386156_159198346_n.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+}
+.content {
+  display: block;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.spacing {
+  height: 200px;
+}
+.infodono {
+  margin-top: 29px;
+  margin-left: 35px;
+  padding-left: 0px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+}
+.topcontent {
+  display: block;
+  width: auto;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(561453_472909459386156_159198346_n.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+}
+.container {
+  display: block;
+  width: auto;
+  max-width: 990px;
+  min-width: 770px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+.logotop {
+  display: block;
+  width: 200px;
+  height: 136px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(logotop.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+  -webkit-transition: all 173ms ease;
+  -o-transition: all 173ms ease;
+  transition: all 173ms ease;
+}
+.divider {
+  display: block;
+  width: 80%;
+  height: 34px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(divider1.png);
+  background-position: 50% 0px;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+}
+.container2 {
+  height: 600px;
+  padding-right: 0px;
+  border-right: 0px solid #ffe42f;
+  border-bottom: 0px solid #ffe42f;
+  border-left: 0px solid #ffe42f;
+}
+.biotop {
+  position: relative;
+  left: 101px;
+  bottom: -97px;
+  text-align: left;
+}
+.h1full {
+  top: -173px;
+  width: auto;
+  margin-bottom: 26px;
+  font-size: 90px;
+  text-align: left;
+  letter-spacing: -6px;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 6px;
+}
+.biotopdes {
+  width: auto;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 26px;
+  line-height: 27px;
+  font-weight: 300;
+  text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 5px;
+}
+.alerta {
+  top: -173px;
+  width: auto;
+  padding-right: 100px;
+  padding-left: 100px;
+  font-family: Lato, sans-serif;
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 900;
+  text-shadow: #cba12a 2px 2px 2px;
+}
+.footer {
+  display: block;
+  width: 940px;
+  height: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #bab400;
+  background-image: none;
+}
+.infobox {
+  padding: 30px;
+  border: 1px solid #ffe42f;
+}
+.campoform {
+  display: block;
+  width: 300px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 6px;
+  background-image: -webkit-linear-gradient(white, #fcf2bb);
+  background-image: -o-linear-gradient(white, #fcf2bb);
+  background-image: linear-gradient(white, #fcf2bb);
+  font-family:'Open Sans', sans-serif;
+  color: #5f3a2d;
+  font-weight: 600;
+}
+.loginform {
+  display: block;
+  width: 500px;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 00px;
+  border: 1px solid #ffe42f;
+  border-radius: 4px;
+}
+.submitlogin {
+  width: 300px;
+  height: 68px;
+  padding-right: 62px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(button_02.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+  font-family:'Droid Sans', sans-serif;
+  color: #5c372b;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.h1login {
+  top: -173px;
+  font-size: 41px;
+  letter-spacing: -1px;
+}
+.footerbar {
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  width: 100%;
+  margin-top: 36px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #573428;
+}
+.footertxt {
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (max-width: 991px) {
+  body {
+    background-image: url(bg.jpg);
+  }
+  h1 {
+    top: -173px;
+  }
+  .infodono {
+    margin-left: 30px;
+    padding-top: 28px;
+    font-family:'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+  }
+  .topcontent {
+    background-image: url(5988290493_3f4a3082b3_o.jpg);
+    background-position: 50% -47px;
+  }
+  .logotop {
+    margin-left: 60px;
+  }
+  .divider {
+    background-image: url(divider1.png);
+    background-position: 50% 0px;
+  }
+  .biotop {
+    left: 45px;
+  }
+  .biotopdes {
+    text-shadow: rgba(0, 0, 0, 0.6) 1px 1px 5px;
+  }
+  .alerta {
+    text-shadow: #cba12a 2px 2px 2px;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background-image: url(bg.jpg);
+  }
+  h1 {
+    top: -173px;
+  }
+  .logotop {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 479px) {
+  body {
+    margin-bottom: 0px;
+    padding-bottom: 19px;
+    background-image: url(bgmain.jpg);
+    background-position: 50% 0px;
+    background-size: auto;
+    background-repeat: no-repeat no-repeat;
+  }
+  h1 {
+    top: -173px;
+    margin-top: 27px;
+    font-size: 90px;
+    letter-spacing: -7px;
+    text-shadow: rgba(10, 1, 1, 0.45) 1px 1px 0px;
+  }
+  h4 {
+    margin-bottom: 0px;
+    font-family: Lato, sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    text-shadow: rgba(10, 1, 1, 0.45) 1px 1px 0px;
+  }
+  p {
+    padding-left: 0px;
+  }
+  .button {
+    display: inline;
+    width: 55px;
+    height: 50px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(buttonback.png);
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    font-weight: 400;
+    text-align: left;
+  }
+  .bgmain {
+    width: 480px;
+    height: 750px;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 100% 50%;
+    background-size: cover;
+    background-repeat: no-repeat no-repeat;
+  }
+  .contentmob {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    padding: 0px 31px 20px 30px;
+  }
+  .buttonhome {
+    height: 120px;
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-left: 15px;
+    background-image: url(button_01.png);
+    background-position: 100% 50%;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-attachment: scroll;
+  }
+  .textbutton01 {
+    position: static;
+    display: block;
+    margin-top: 0px;
+    padding-left: 10px;
+    background-image: url(button_01.png);
+    background-position: 100% 50%;
+    font-family:'Open Sans', sans-serif;
+    color: #5c372b;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: -1px;
+    text-decoration: none;
+  }
+  .coverimg {
+    width: 100%;
+    height: 200px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-top: 95px;
+    padding-left: 0px;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .topbar {
+    width: 100%;
+    height: 50px;
+    padding-left: 0px;
+    background-image: -webkit-linear-gradient(white, #e0dede 80%);
+    background-image: -o-linear-gradient(white, #e0dede 80%);
+    background-image: linear-gradient(white, #e0dede 80%);
+    text-align: center;
+  }
+  .textobar {
+    position: static;
+    display: inline-block;
+    overflow: visible;
+    width: auto;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-left: 0px;
+    float: none;
+    clear: none;
+    font-family:'Open Sans', sans-serif;
+    color: #fcb900;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
+  }
+  .topblock {
+    width: auto;
+    padding-top: 15px;
+    padding-left: 0px;
+    font-family:'Open Sans', sans-serif;
+    color: #fcb900;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .bio {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-family:'Open Sans', sans-serif;
+    color: #8c3e24;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+  }
+  .meudonohr {
+    width: 100%;
+    height: 11px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url(meudonohr.png);
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+  }
+  .profiledono {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-image: url(donoprofile.png);
+    background-size: cover;
+    background-repeat: no-repeat no-repeat;
+  }
+  .donoprofile {
+    margin-bottom: 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  .infodono {
+    margin-bottom: 41px;
+    padding-top: 14px;
+    padding-left: 113px;
+    font-family:'Open Sans', sans-serif;
+    color: #5c372b;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: -1px;
+  }
+  .buttonalert {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-image: url(button_02.png);
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    text-align: left;
+  }
+  .logotop {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -15,5 +15,6 @@
 //= require jquery.Jcrop
 //= require bootstrap
 //= require_tree .
+//= require_webflow
 jQuery ->
   $('#cropbox').Jcrop()

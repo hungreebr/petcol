@@ -1,48 +1,25 @@
-﻿
-<!-- BEGIN BODY -->
-<body class="login">
-  <!-- BEGIN LOGO -->
-  <div class="logo">
-   <%= image_tag 'logopet3.png' %>
-  </div>
-  <!-- END LOGO -->
-  <!-- BEGIN LOGIN -->
-  <div class="content">
-    <!-- BEGIN LOGIN FORM -->
-      <h3 class="form-title">Conecte-se e mostre seu pet para o mundo!</h3>
-
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class:"login-form"}) do |f| %>
-  <fieldset>
-  <%= f.input :email, label: 'E-mail', input_html: { class: 'm-wrap input-bg' }, label_html: { style: 'font-color: #fff;' }  %>
-  <%= f.input :password, label: 'Senha', input_html: { class: 'm-wrap' }, label_html: { style: 'font-color: #fff;' }   %>
+﻿<div class="logotop"></div>
+  <h1 class="h1login">Acesso restrito a convidados!</h1>
+  <div class="w-container">
+    <div>
+      <div>
+		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class:"w-form loginform"}) do |f| %>
+		<fieldset>
+		<%= f.input :email, label: false, placeholder: 'E-mail', input_html: { class: 'w-input campoform' }, label_html: { style: 'font-color: #fff;' }  %>
+		<%= f.input :password, label: false, placeholder: 'Senha', input_html: { class: 'w-input campoform' }, label_html: { style: 'font-color: #fff;' }   %>
   
 
 
-<div><%= f.button :submit, "Login" %></div>
+		<div><%= f.button :submit, "Login" %></div>
 </fieldset>
 <% end %>
 
 <!-- <%= render "devise/shared/links" %> -->
  
-    <!-- END LOGIN FORM -->          
+    <!-- END LOGIN FORM --> 
+    </div>
   </div>
-     <div class="forget-password">
-        <h4 style="color: #FFB109">Esqueceu a senha?</h4>
-        <p>
-          Não se preocupe, clique <a href="users/password/new">aqui</a>
-          para recuperar.
-        </p>
-      </div>
-  <!-- END LOGIN -->
-  <!-- BEGIN COPYRIGHT -->
-  
-  <!-- END COPYRIGHT -->
- 
-
-</div>
-<div class="row">
-<div class="span6 offset6">
-	<h2 style="color: #fff; opacity: 0.8 "> Acesso restrito a convidados</h2>
-</div>
-</div>
-</div>
+  </div>
+  <footer class="footerbar">
+    <p class="footertxt">Meu Peludo - Todos os Direitos Reservados</p>
+  </footer>
