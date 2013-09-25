@@ -4,14 +4,12 @@
     <div>
       <div>
 		<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class:"w-form loginform"}) do |f| %>
-		<fieldset>
 		<%= f.input :email, label: false, placeholder: 'E-mail', input_html: { class: 'w-input campoform' }, label_html: { style: 'font-color: #fff;' }  %>
 		<%= f.input :password, label: false, placeholder: 'Senha', input_html: { class: 'w-input campoform' }, label_html: { style: 'font-color: #fff;' }   %>
   
 
 
 		<div><%= f.button :submit, "Login" %></div>
-</fieldset>
 <% end %>
 
 <!-- <%= render "devise/shared/links" %> -->
@@ -20,6 +18,3 @@
     </div>
   </div>
   </div>
-  <footer class="footerbar">
-    <p class="footertxt">Meu Peludo - Todos os Direitos Reservados</p>
-  </footer>

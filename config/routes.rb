@@ -1,4 +1,7 @@
 Petcol::Application.routes.draw do
+  resources :posts
+
+
   resources :pets
 
 

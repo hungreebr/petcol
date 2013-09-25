@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408024713) do
+ActiveRecord::Schema.define(:version => 20130925210149) do
 
   create_table "pets", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,20 @@ ActiveRecord::Schema.define(:version => 20130408024713) do
   end
 
   add_index "pets", ["user_id"], :name => "index_pets_on_user_id"
+
+  create_table "posts", :force => true do |t|
+    t.integer  "pet"
+    t.integer  "author"
+    t.integer  "picture"
+    t.text     "story"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.integer  "pet_id"
+  end
+
+  add_index "posts", ["pet_id"], :name => "index_posts_on_pet_id"
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "statuses", :force => true do |t|
     t.text     "content"
