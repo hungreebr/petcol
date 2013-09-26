@@ -1,4 +1,5 @@
 Petcol::Application.routes.draw do
+
   resources :posts
 
 
@@ -12,7 +13,7 @@ Petcol::Application.routes.draw do
 	get 'register', to: 'devise/registrations#new', as: :register
 	get 'login', to: 'devise/sessions#new', as: :login
 	get 'logout', to: 'devise/sessions#destroy', as: :logout
-	  root to: 'devise/sessions#new'
+	 root to: 'devise/sessions#new', :layouts => "devise/sessions.html.erb" 
   end
   
   resources :statuses 	

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>meupeludo - 2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%= stylesheet_link_tag    "webflow", :media => "all" %>
+	<%= stylesheet_link_tag    "normalize", :media => "all" %>
+	<%= stylesheet_link_tag    "styledefault", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Ubuntu:300,400,500,700","Open Sans:300,400,600,700,800","Bitter:400,700","Lato:100,300,400,700,900"]
+        }
+      });
+    </script>
+
+  </head><body>
+  <div class="tophead"></div>
+  <div class="w-row contentblock">
+    <div class="w-col w-col-5 w-col-medium-6">
+      <div class="loginarea">
+        <%= image_tag ("logotrans.png"), :class => 'logo' %>
+        <h3 class="login">Acesso restrito a convidados</h3>
+        <div>
+         <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		<%= f.input :email, label: false, placeholder: 'E-mail', input_html: { class: 'w-input loginfields' }, label_html: { style: 'font-color: #fff;' }  %>
+		<%= f.input :password, label: false, placeholder: 'Senha', input_html: { class: 'w-input loginfields' }, label_html: { style: 'font-color: #fff;' }   %>
+		<div><%= f.button :submit, "QUERO FAZER LOGIN", :class => 'w-button loginsubmit'  %></div>
+<% end %>
+                  
+        </div>
+      </div>
+    </div>
+    <div class="w-col w-col-7 w-col-medium-6">
+      <div class="breveblock">
+        <h2 class="breve">Aguarde, estamos quase lá! :)</h2>
+        <p class="brevetxt">Estamos trabalhando duro para abrir o acesso do público a nossa plataforma o <strong>mais breve possível</strong>.
+          <br>Por enquanto estamos testando o sistema com alguns convidados.
+          <br>
+          <br>Acompanhe nossas novidades nas redes sociais e fique atento para a distribuição de novos convites para acesso!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

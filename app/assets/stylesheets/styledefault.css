@@ -1,0 +1,172 @@
+body {
+  background-image: url(background.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+}
+h1 {
+  margin: 10px 0px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin: 10px 0px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.tophead {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 270px;
+  background-image: url(tophead.jpg);
+  background-position: 100% 100%;
+}
+.loginarea {
+  position: relative;
+  top: -203px;
+  display: block;
+  width: 356px;
+  margin-left: 91px;
+  padding: 50px 53px;
+  border-radius: 4px;
+  background-color: #ffcb16;
+}
+.logo {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.login {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
+  text-shadow: rgba(191, 159, 46, 0.74) 1px 1px 2px;
+}
+.loginfields {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: rgba(191, 159, 46, 0.6) 1px 1px 3px 1px;
+  font-family:'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.loginsubmit {
+  width: 100%;
+  border-radius: 3px;
+  background-image: url(arrow-right.png);
+  background-position: 93% 50%;
+  background-size: auto;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+  font-family:'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+}
+.breveblock {
+  position: static;
+  width: auto;
+  max-width: 600px;
+  min-width: 200px;
+  margin-right: 4px;
+  padding-top: 20px;
+  padding-left: 40px;
+  float: none;
+  text-align: left;
+}
+.breve {
+  margin-bottom: 15px;
+  font-family: Bitter, serif;
+  color: white;
+  font-size: 33px;
+  font-weight: 400;
+}
+.brevetxt {
+  font-family: Lato, sans-serif;
+  color: #d1baba;
+  font-size: 17px;
+  line-height: 31px;
+  font-weight: 300;
+}
+.contentblock {
+  position: absolute;
+  left: 0px;
+  top: 256px;
+  right: 0px;
+  display: inline;
+}
+@media (max-width: 991px) {
+  .loginarea {
+    margin-left: 15px;
+  }
+  .login {
+    font-family: Ubuntu, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  .breveblock {
+    padding-left: 0px;
+  }
+  .breve {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 479px) {
+  .loginarea {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
