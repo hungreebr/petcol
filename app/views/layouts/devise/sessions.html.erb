@@ -16,10 +16,10 @@
         }
       });
     </script>
-
-  </head><body>
+  </head>
+  <body  style="background: url(<%= image_path 'background.jpg' %>); background-size: cover;">
   <div class="tophead"></div>
-  <div class="w-row contentblock">
+  <div class="w-row">
     <div class="w-col w-col-5 w-col-medium-6">
       <div class="loginarea">
         <%= image_tag ("logotrans.png"), :class => 'logo' %>
@@ -44,5 +44,9 @@
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <%= image_tag 'icons-1.png' %>
+    <div class="footertxt">Todos os direitos reservados - Meu Peludo</div>
+  </footer>
 </body>
 </html>

@@ -4,7 +4,6 @@
   <title>MeuPeludo</title>
   <%= yield(:head) %>
   <%= csrf_meta_tags %>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <script>
       WebFont.load({
         google: {
@@ -15,8 +14,6 @@
    <%= stylesheet_link_tag    "webflow", :media => "all" %>
    <%= stylesheet_link_tag    "normalize", :media => "all" %>
    <%= stylesheet_link_tag    "styledefault", :media => "all" %>
-</head>
-<body>
   <div class="topbar"><%= image_tag 'logomini.png' %></div>
   <%= yield %>
    <footer class="footer">

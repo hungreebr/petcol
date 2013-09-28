@@ -1,6 +1,5 @@
 class ProfilesController < ApplicationController
   def show
-    @owner = current_user.name
 	@user = User.find_by_profile_name(params[:id]) || current_user
 	if @user
 		@pets = @user.pets

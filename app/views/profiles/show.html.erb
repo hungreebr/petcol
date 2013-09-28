@@ -5,9 +5,9 @@
     <div class="w-container content">
       <div class="userinfo">
         <div class="userbadge"></div>
-        <p class="userinfo usercall"><strong><%= @owner %></strong>,
+        <p class="userinfo usercall"><strong><%= current_user.first_name %></strong>,
           <br>deseja cadastrar seu peludo?</p>
-        <div class="center"><a class="button style1" href="#">QUERO!</a><a class="button transparent" href="#">AINDA NÃO.</a>
+        <div class="center"><%= link_to "QUERO!", new_pet_path, class: "button style1" %><a class="button transparent" href="#">AINDA NÃO.</a>
         </div>
       </div>
       <div class="divider"></div>
@@ -17,38 +17,28 @@
           <h4 class="peludos h4">Meus peludos</h4>
           <h5 class="peludos h5">Seus pets que já estão conectados</h5>
           <div class="peludos list">
-            <div class="peludos controls">
-              <div class="petbadge toto">
-                <div class="badgeinfo">
-                  <h1 class="peludos h1">Totozinho</h1>
-                  <h2 class="peludos h2">O Fox Paulistinha</h2>
-                </div>
-              </div>
-              <div class="controls">Visualizar Perfil
-                <br>Editar Perfil
-                <br>Deletar Pet</div>
-            </div>
-            <div class="peludos controls">
-              <div class="petbadge">
-                <div class="badgeinfo">
-                  <h1 class="peludos h1">Balu</h1>
-                  <h2 class="peludos h2">A Lhasa Apso</h2>
-                </div>
-              </div>
-              <div class="controls">Visualizar Perfil
-                <br>Editar Perfil
-                <br>Deletar Pet</div>
-            </div>
-            <div class="peludos controls">
-              <div class="petbadge addpet">
-                <div class="badgeinfo">
-                  <h3 class="peludos h3">Quer <br>adicionar <br>um Pet?</h3>
-                </div>
-              </div>
-              <div class="controls">Visualizar Perfil
-                <br>Editar Perfil
-                <br>Deletar Pet</div>
-            </div>
+          	<% if @pets %>
+				<% @pets.each do |pet| %>
+			 		<div class="peludos controls">
+             			<div class="petbadge">
+                			<div class="badgeinfo">
+                  				<h1 class="peludos h1"><%= pet.name %></h1>
+                 				<h2 class="peludos h2"><% if pet.gender == "Male" %>
+                 											O <%= pet.breed %>
+                 										<% else %>
+                 											A <%= pet.breed %>
+                 										<% end -%>
+                 										</h2>
+                			</div>
+              			</div>
+              			<div class="controls">
+              				<br><%= link_to 'Ver Perfil', pet_path(pet) %>
+                			<br><%= link_to 'Editar Perfil', edit_pet_path(pet) %>
+                			<br><%= link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
+                		</div>
+           			</div>
+				<% end %>
+			<% end %>
           </div>
         </div>
       </div>
