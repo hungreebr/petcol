@@ -8,12 +8,12 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require_styledefault
  *= require jquery.Jcrop
  *= require_self
- *= require_tree .
- */
-@import "bootstrap.css";
-@import "bootstrap-responsive.css";
-@import "normalize.css";
-@import "webflow.css";
-@import "styledefault.css";
+ *= require_tree 
+ *= require_webflow
+ *= require_bootstrap
+ *= require_bootstrap-responsive
+ *= require_normalize
+*/

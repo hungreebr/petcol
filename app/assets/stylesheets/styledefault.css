@@ -1,19 +1,20 @@
 body {
-  background-image: url(background.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat no-repeat;
-  background-attachment: fixed;
+  background-color: #eee;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
   font-size: 12px;
   line-height: 20px;
 }
 h1 {
-  margin: 10px 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  font-family:'Open Sans', sans-serif;
+  color: black;
   font-size: 38px;
   line-height: 44px;
-  font-weight: 700;
+  font-weight: 300;
+  letter-spacing: -2px;
 }
 h2 {
   margin: 10px 0px;
@@ -50,20 +51,48 @@ p {
 }
 .button {
   display: inline-block;
-  padding: 4px 15px;
-  background-color: black;
-  color: white;
+  width: 200px;
+  height: 42px;
+  margin-right: 15px;
+  margin-left: 0px;
+  padding: 12px 15px 4px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #9c9494;
   text-align: center;
   text-decoration: none;
+}
+.button.style1 {
+  width: 200px;
+  margin-right: 0px;
+  padding-top: 11px;
+  float: none;
+  border-radius: 4px;
+  background-color: #353434;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+.button.transparent {
+  width: auto;
+  float: none;
+  font-family:'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
 }
 .tophead {
   position: relative;
   left: 0px;
   top: 0px;
   right: 0px;
-  height: 270px;
+  height: 350px;
   background-image: url(tophead.jpg);
-  background-position: 100% 100%;
+  background-position: 68% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
 }
 .loginarea {
   position: relative;
@@ -141,11 +170,220 @@ p {
   font-weight: 300;
 }
 .contentblock {
-  position: absolute;
+  position: static;
   left: 0px;
   top: 256px;
   right: 0px;
-  display: inline;
+  z-index: 0;
+  display: block;
+  overflow: visible;
+  height: 100%;
+  margin-bottom: -50px;
+  padding-bottom: 0px;
+  background-image: url(background.jpg);
+}
+.topbar {
+  height: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-image: url(bgtop.jpg);
+  text-align: center;
+}
+.header {
+  height: 94px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #d8d8d1;
+  background-color: white;
+  background-image: none;
+  text-align: center;
+}
+.userbadge {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 15px solid #e0e0d0;
+  border-radius: 100px;
+  background-color: #d8d8d1;
+  background-image: url(IMG_5216.JPG);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+}
+.content {
+  text-align: center;
+}
+.userinfo {
+  display: block;
+  width: auto;
+  margin-right: auto;
+  margin-bottom: 65px;
+  margin-left: auto;
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.userinfo.usercall {
+  width: 100%;
+  margin-bottom: 35px;
+  padding-top: 25px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+.center {
+  display: block;
+  width: 100%;
+  margin-right: auto;
+}
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #e2e1dc;
+}
+.peludos.head {
+  display: block;
+  width: auto;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0);
+}
+.peludos.h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+.peludos.h5 {
+  margin-bottom: 50px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.peludos.list {
+  display: block;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  clear: none;
+}
+.peludos.h1 {
+  width: auto;
+  height: auto;
+  padding-top: 77px;
+  box-shadow: none;
+  color: white;
+  font-size: 46px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 6px;
+}
+.peludos:hover.h1:hover {
+  color: white;
+}
+.peludos.h2 {
+  margin-top: 0px;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 6px;
+}
+.peludos.h3 {
+  padding-top: 60px;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 31px;
+  line-height: 35px;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.16) 1px 1px 0px;
+}
+.peludos.controls {
+  display: inline-block;
+}
+.petbadge {
+  position: static;
+  display: block;
+  width: 260px;
+  height: 260px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: 20px;
+  border: 20px solid #e0e0d0;
+  border-radius: 200px;
+  background-color: #e2e1dc;
+  background-image: url(561453_472909459386156_159198346_n.jpg);
+  background-size: cover;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+.petbadge:hover {
+  border-color: #404041;
+  -webkit-transform: scale(1.12);
+  -ms-transform: scale(1.12);
+  -o-transform: scale(1.12);
+  transform: scale(1.12);
+}
+.petbadge.toto {
+  display: block;
+  margin-top: 1px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(5561147907_d81807d500_o.jpg);
+}
+.petbadge:hover.toto:hover {
+  -webkit-transform: scale(1.12);
+  -ms-transform: scale(1.12);
+  -o-transform: scale(1.12);
+  transform: scale(1.12);
+}
+.petbadge.addpet {
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0);
+  background-image: none;
+}
+.footer {
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow: visible;
+  height: 90px;
+  margin-top: 50px;
+  padding-top: 25px;
+  clear: none;
+  background-color: #404041;
+  box-shadow: black 0px 1px 21px -3px inset;
+  text-align: center;
+}
+.controls {
+  margin-top: 20px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.controls:hover {
+  font-weight: 600;
+}
+.footertxt {
+  display: inline-block;
+  margin-left: 24px;
+  float: none;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 13px;
+  font-weight: 300;
 }
 @media (max-width: 991px) {
   .loginarea {
@@ -154,19 +392,62 @@ p {
   .login {
     font-family: Ubuntu, Helvetica, sans-serif;
     font-weight: 700;
+    text-shadow: rgba(191, 159, 46, 0.74) 1px 1px 2px;
+  }
+  .loginsubmit {
+    background-image: url(arrow-right.png);
+    background-position: 93% 50%;
   }
   .breveblock {
     padding-left: 0px;
   }
   .breve {
-    font-size: 26px;
+    margin-top: -10px;
+    font-size: 24px;
+  }
+  .brevetxt {
+    margin-top: -16px;
+    font-size: 16px;
+    line-height: 30px;
   }
 }
 @media (max-width: 767px) {
-}
-@media (max-width: 479px) {
+  .tophead {
+    background-position: 100% 50%;
+  }
   .loginarea {
     margin-right: auto;
     margin-left: auto;
+  }
+  .breveblock {
+    display: block;
+    max-width: 356px;
+    margin-top: -150px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 24px;
+  }
+  .tophead {
+    background-image: url(tophead.jpg);
+    background-position: 79% 50%;
+  }
+  .loginarea {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .breve {
+    font-size: 21px;
+  }
+  .brevetxt {
+    font-size: 15px;
+    text-align: center;
+  }
+  .peludos.h5 {
+    line-height: 24px;
   }
 }

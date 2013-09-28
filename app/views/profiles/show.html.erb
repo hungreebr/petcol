@@ -1,30 +1,56 @@
-﻿<div class="container">
- <div>
-          <div class="hero-unit">
-            <h1>Olá, <%= current_user.first_name %>!</h1>
-            <p>Esta é a página principal do usuário. <br>Clique no botão abaixo para criar o perfil do seu animal</p>
-            <p><%= link_to "Adicionar Pet", new_pet_path, class: "btn btn-primary btn-large" %></p>
-          </div>	
-
-	<% @pets.each do |pet| %>
-	<div class="row-fluid">
-	<div class="span4">
-	<%= image_tag pet.pet_image_url %>
-
-	</div>
-	<div class="span8">
-		<div class="well">
-			<p><%= pet.name %></p>
-			<p><%= pet.breed %></p>
-			<p><%= pet.birthday %></p>
-			<hr />
-			<%= link_to 'Ver Perfil', pet_path(pet) %><br>
-			<%= link_to 'Editar Perfil', edit_pet_path(pet) %><br>
-			<%= link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
-			</div>
-	</div>		
-	</div>		
-	<% end %>
-	
-
+﻿<div class="header">
+    	<h1><strong>Seja bem vindo</strong> ao Meu Peludo</h1>
 </div>
+  <div style="background-color: #eee;">
+    <div class="w-container content">
+      <div class="userinfo">
+        <div class="userbadge"></div>
+        <p class="userinfo usercall"><strong><%= @owner %></strong>,
+          <br>deseja cadastrar seu peludo?</p>
+        <div class="center"><a class="button style1" href="#">QUERO!</a><a class="button transparent" href="#">AINDA NÃO.</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="peludos">
+        <div class="peludos head">
+          <%= image_tag 'icon-paw.png' %>
+          <h4 class="peludos h4">Meus peludos</h4>
+          <h5 class="peludos h5">Seus pets que já estão conectados</h5>
+          <div class="peludos list">
+            <div class="peludos controls">
+              <div class="petbadge toto">
+                <div class="badgeinfo">
+                  <h1 class="peludos h1">Totozinho</h1>
+                  <h2 class="peludos h2">O Fox Paulistinha</h2>
+                </div>
+              </div>
+              <div class="controls">Visualizar Perfil
+                <br>Editar Perfil
+                <br>Deletar Pet</div>
+            </div>
+            <div class="peludos controls">
+              <div class="petbadge">
+                <div class="badgeinfo">
+                  <h1 class="peludos h1">Balu</h1>
+                  <h2 class="peludos h2">A Lhasa Apso</h2>
+                </div>
+              </div>
+              <div class="controls">Visualizar Perfil
+                <br>Editar Perfil
+                <br>Deletar Pet</div>
+            </div>
+            <div class="peludos controls">
+              <div class="petbadge addpet">
+                <div class="badgeinfo">
+                  <h3 class="peludos h3">Quer <br>adicionar <br>um Pet?</h3>
+                </div>
+              </div>
+              <div class="controls">Visualizar Perfil
+                <br>Editar Perfil
+                <br>Deletar Pet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
