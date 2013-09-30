@@ -1,6 +1,8 @@
-<h1>Editing pet</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @pet %> |
-<%= link_to 'Back', pets_path %>
+<div class="w-container content">
+	<div class="section">
+		<h1 class="introhead">Você está editando o perfil de <%= @pet.name %></h1>
+		<%= render 'form' %> 
+		<%= link_to 'Visualizar', @pet %> |
+		<%= link_to 'Voltar', :back %>
+  </div>
+</div>

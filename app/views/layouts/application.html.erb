@@ -2,20 +2,21 @@
 <html>
 <head>
   <title>MeuPeludo</title>
-  <%= yield(:head) %>
   <%= csrf_meta_tags %>
   <script>
       WebFont.load({
         google: {
-          families: ["Ubuntu:300,400,500,700","Open Sans:300,400,600,700,800","Bitter:400,700","Lato:100,300,400,700,900"]
+          families: ["Open Sans:300,400,600,700,800","Ubuntu:300,400,500,700","Bitter:400,700","Lato:100,300,400,700,900","Oswald:300,400,700"]
         }
       });
     </script>
-   <%= stylesheet_link_tag    "webflow", :media => "all" %>
-   <%= stylesheet_link_tag    "normalize", :media => "all" %>
-   <%= stylesheet_link_tag    "styledefault", :media => "all" %>
+   <%= stylesheet_link_tag    "webflow" %>
+   <%= stylesheet_link_tag    "normalize" %>
+   <%= stylesheet_link_tag    "styledefault" %>
+</head>
+<body>   
   <div class="topbar"><%= image_tag 'logomini.png' %></div>
-  <%= yield %>
+ <%=yield%>
    <footer class="footer">
     <%= image_tag 'icons-1.png' %>
     <div class="footertxt">Todos os direitos reservados - Meu Peludo</div>

@@ -130,6 +130,15 @@ p {
   font-family:'Open Sans', sans-serif;
   font-weight: 600;
   letter-spacing: 0px;
+  display: block;
+width: 100%;
+height: 38px;
+padding: 8px 12px;
+margin-bottom: 10px;
+font-size: 14px;
+line-height: 1.428571429;
+color: #555555;
+vertical-align: middle;
 }
 .loginsubmit {
   width: 100%;
@@ -143,6 +152,12 @@ p {
   font-size: 13px;
   font-weight: 600;
   text-align: left;
+  display: inline-block;
+padding: 12px;
+background-color: black;
+color: white;
+border: 0;
+line-height: inherit;
 }
 .breveblock {
   position: static;
@@ -450,4 +465,30 @@ p {
   .peludos.h5 {
     line-height: 24px;
   }
+}
+.section {
+  padding-top: 40px;
+  padding-right: 80px;
+  padding-left: 80px;
+  text-align: center;
+}
+.fieldstyle1 {
+  display: block;
+  width: 450px;
+  height: 100px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-style: solid;
+  border-width: 0px 0px 2px;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) black;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: transparent 0px 1px 0px 0px inset;
+  font-family: Open Sans, sans-serif;
+  color: black;
+font-size: 80px;
+font-weight: bold;
+letter-spacing: -7px;
 }

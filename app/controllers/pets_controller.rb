@@ -15,7 +15,7 @@ class PetsController < ApplicationController
   # GET /pets/1.json
   def show
   @pet = Pet.find(params[:id])
-   	@feed = Post.find_by_id(:id)
+  @feed = Post.find_by_id(:id)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @pet }
@@ -37,11 +37,13 @@ class PetsController < ApplicationController
   # GET /pets/1/edit
   def edit
     @pet = Pet.find(params[:id])
+    @author_id = current_user.id
   end
 
   # POST /pets
   # POST /pets.json
   def create
+    @author_id = current_user.id
     @pet = Pet.new(params[:pet])
 		if @pet.save
 			if params[:pet][:pet_image].present?

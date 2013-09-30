@@ -3,14 +3,14 @@
 
   <div class="form-inputs">
     <%= f.input :user_id, as: :hidden, input_html: { value: @author_id } %>
-    <%= f.input :name %>
-    <%= f.input :birthday, as: :date %>
-    <%= f.input :breed %>
-    <%= f.input :gender %>
-    <%= f.input :hobbies %>
-    <%= f.input :description, as: :text %>
-    <%= f.input :pet_image, as: :file %>
+    <%= f.input :name, input_html: { class: 'w-input-clean fieldstyle1', placeholder: 'Nome' } %>
+    <%= f.input :birthday, as: :date, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
+    <%= f.input :breed, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
+    <%= f.input :gender, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
+    <%= f.input :hobbies, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
+    <%= f.input :description, as: :text, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
   </div>
+<input class="w-input-clean fieldstyle1" type="text" placeholder="Qual o nome do seu pet? " name="field" required="required"></input>
 
   <div class="form-actions">
     <%= f.button :submit %>
