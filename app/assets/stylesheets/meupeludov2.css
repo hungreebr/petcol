@@ -1,0 +1,444 @@
+body {
+  height: 410px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+}
+h1 {
+  margin: 10px 0px;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+}
+h2 {
+  margin: 10px 0px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+h3 {
+  margin: 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.topbar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  width: 100%;
+  height: 55px;
+  padding: 12px 30px 0px;
+  background-color: rgba(253, 191, 0, 0.70);
+}
+.navlateral {
+  width: auto;
+  height: 200px;
+  min-height: 100%;
+  margin-top: 220px;
+  margin-left: 5px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.lateral {
+  padding-left: 0px;
+}
+.container {
+  height: 100%;
+  padding-left: 0px;
+  margin-top: 70px;
+}
+.petbackground {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 100%;
+  min-height: 100%;
+  margin-top: -20px;
+  padding-left: 0px;
+  float: none;
+  background-image: url(561453_472909459386156_159198346_n.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: scroll;
+  text-align: center;
+}
+.petbackground.overlay {
+  padding-left: 0px;
+  background-image: url(overlay1.png);
+  background-size: auto;
+  background-repeat: repeat repeat;
+  background-attachment: scroll;
+}
+.centro {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.fullcontent {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+.ownername {
+  margin-top: -25px;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.petcontent {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+.petcontent.text {
+  padding-top: 238px;
+}
+.whiteline {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 20px auto 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 1px solid white;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  box-shadow: none;
+}
+.petname {
+  display: block;
+  width: auto;
+  height: auto;
+  margin-right: auto;
+  margin-bottom: 95px;
+  padding-top: 0px;
+  font-family: Lato, sans-serif;
+  color: white;
+  font-size: 200px;
+  font-weight: 900;
+  letter-spacing: -14px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+}
+.petcontentarea {
+  width: 50%;
+}
+.petconten {
+  position: static;
+  left: 0px;
+  right: 0px;
+  bottom: -250px;
+  display: inline-block;
+  width: auto;
+  max-width: 800px;
+  min-width: 400px;
+  margin-top: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.pettagline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 28px auto 15px;
+  padding-left: 0px;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+}
+.barafooter {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+.logo {
+  display: inline-block;
+  float: left;
+}
+.usernav {
+  width: 150px;
+  height: 60px;
+  margin-top: -12px;
+  float: right;
+  background-color: #472d0f;
+}
+.contentpet {
+  height: 100%;
+}
+.navitem {
+  width: 115px;
+  height: 115px;
+  margin-top: 5px;
+  padding-top: 17px;
+  background-color: #f8f2ed;
+}
+.navitem.selected {
+  background-color: rgba(159, 79, 31, 0.70);
+}
+.navbadge {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  border: 5px solid #e0e0d0;
+  border-radius: 100px;
+  background-color: white;
+  background-image: url(301195_288547474489023_388241850_n.jpg);
+  background-size: cover;
+}
+.navtext {
+  font-family:'PT Sans', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.navtext.dark {
+  color: #a95b26;
+  letter-spacing: -1px;
+}
+.icon-pata {
+  display: block;
+  width: 44px;
+  height: 42px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  background-image: url(icon-pata.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+}
+.icon-feed {
+  display: block;
+  width: 36px;
+  height: 48px;
+  margin-right: auto;
+  margin-bottom: 5px;
+  margin-left: auto;
+  background-image: url(icon-feed.png);
+}
+.petinfos {
+  width: 100%;
+}
+.petinfos.item {
+  display: block;
+  width: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+.petinfos.h5 {
+  position: static;
+  display: inline-block;
+  width: auto;
+  margin-top: 0px;
+  padding-left: 10px;
+  float: none;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+}
+.icon-coracao {
+  display: inline-block;
+  margin-top: -5px;
+  float: none;
+}
+.butonmenu {
+  width: 150px;
+  height: 35px;
+  padding-top: 8px;
+  float: right;
+  border-radius: 7px;
+  background-color: #723724;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+}
+@media (max-width: 991px) {
+  .navlateral {
+    margin-left: 2px;
+  }
+  .petbackground {
+    height: 100%;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
+  }
+  .petname {
+    font-size: 150px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .petconten {
+    top: -250px;
+  }
+  .pettagline {
+    margin-top: -10px;
+    padding-left: 0px;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .petinfos.h5 {
+    font-size: 14px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+}
+@media (max-width: 767px) {
+  .navlateral {
+    display: block;
+    width: 300px;
+    height: 150px;
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+  }
+  .petbackground {
+    height: 100%;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
+  }
+  .whiteline {
+    height: 3px;
+  }
+  .petname {
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .petconten {
+    margin-top: -30px;
+  }
+  .navitem {
+    position: static;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin-top: 0px;
+    margin-right: 5px;
+    padding-top: 0px;
+    padding-right: 0px;
+    float: left;
+  }
+  .navitem.selected {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .navbadge {
+    width: 50px;
+    height: 50px;
+    margin-top: 18px;
+    background-image: url(301195_288547474489023_388241850_n.jpg);
+  }
+  .icon-pata {
+    margin-top: 7px;
+    background-image: url(icon-pata.png);
+    background-position: 50% 50%;
+  }
+  .icon-feed {
+    margin-top: 10px;
+    background-image: url(icon-feed.png);
+  }
+  .colunaleft {
+    padding-top: 1px;
+  }
+  .center {
+    display: block;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+@media (max-width: 479px) {
+  .topbar {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .navlateral {
+    width: 285px;
+  }
+  .petbackground {
+    height: 100%;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
+  }
+  .whiteline {
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+  .petname {
+    margin-bottom: 35px;
+    font-size: 70px;
+    letter-spacing: -3px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .petconten {
+    max-width: 480px;
+    min-width: 1px;
+  }
+  .pettagline {
+    font-size: 15px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .icon-feed {
+    height: 48px;
+    background-image: url(icon-feed.png);
+  }
+  .butonmenu {
+    width: auto;
+    font-size: 11px;
+  }
+}

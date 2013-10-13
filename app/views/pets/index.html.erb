@@ -26,6 +26,7 @@
     <td><%= pet.photo %></td>
     <td><%= link_to 'Show', pet %></td>
     <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
+    <%= button_to 'Delete?', pet, :confirm => "Are you sure you want to delete?", :method => :delete %>
     <td><%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

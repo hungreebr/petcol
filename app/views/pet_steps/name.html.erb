@@ -1,0 +1,8 @@
+<%= simple_form_for @pet, url: wizard_path do |f| %>
+ <h1>Tell us a little about yourself.</h1>
+<%= f.input :user_id, as: :hidden, input_html: { value: @author_id } %>
+<%= f.input :gender, label: false, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
+  <div class="actions">
+        <%= f.submit "Continue" %>
+  </div>
+<% end %>

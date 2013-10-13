@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130925210149) do
+ActiveRecord::Schema.define(:version => 20131001032332) do
 
   create_table "pets", :force => true do |t|
     t.string   "name"
@@ -22,14 +22,18 @@ ActiveRecord::Schema.define(:version => 20130925210149) do
     t.string   "hobbies"
     t.text     "description"
     t.binary   "photo"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.integer  "user_id"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "pet_image"
+    t.string   "profilepic_file_name"
+    t.string   "profilepic_content_type"
+    t.integer  "profilepic_file_size"
+    t.datetime "profilepic_updated_at"
   end
 
   add_index "pets", ["user_id"], :name => "index_pets_on_user_id"

@@ -1,8 +1,8 @@
 class Pet < ActiveRecord::Base
-  mount_uploader :pet_image, ImageUploader
-  attr_accessible :birthday, :breed, :description, :gender, :hobbies, :name, :photo, :animal, :user_id, :pet_image
+  attr_accessible :birthday, :breed, :description, :gender, :hobbies, :name, :photo, :animal, :user_id, :pet_image, :profilepic
   belongs_to :user
   has_many :posts
+  has_attached_file :profilepic
   
 
 

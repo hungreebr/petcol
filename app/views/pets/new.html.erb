@@ -1,7 +1,15 @@
-<div class="container">
-<h1>Cadastrar novo Pet</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Voltar', pets_path %>
+<div class="w-container content">
+	<div class="section">
+		<div class="container">
+			<h1>Qual o nome do seu peludo?</h1>
+<%= simple_form_for @pet, input_html: { multipart: true } do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+    <%= f.input :name, label: false, input_html: { class: 'w-input-clean fieldstyle1', placeholder: 'Digite Aqui' } %>
+    <%= f.button :submit %>
+<%= link_to 'Voltar', :back %>
 </div>
+</div>
+</div>
+<% end %>

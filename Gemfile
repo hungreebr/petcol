@@ -6,8 +6,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'paperclip'
 gem 'carrierwave'
-gem 'mini_magick'
-gem 'omniauth-twitter'
+gem 'wicked'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

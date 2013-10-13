@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
   <title>MeuPeludo</title>
-  <%= yield(:head) %>
   <%= csrf_meta_tags %>
   <script>
-      WebFont.load({
+   WebFont.load({
         google: {
-          families: ["Ubuntu:300,400,500,700","Open Sans:300,400,600,700,800","Bitter:400,700","Lato:100,300,400,700,900"]
+          families: ["Open Sans:300,400,600,700,800","Lato:100,300,400,700,900","PT Sans:400,700","Montserrat:400,700"]
         }
       });
     </script>
-   <%= stylesheet_link_tag    "webflow", :media => "all" %>
-   <%= stylesheet_link_tag    "normalize", :media => "all" %>
-   <%= stylesheet_link_tag    "styledefault", :media => "all" %>
-  <div class="topbar"><%= image_tag 'logomini.png' %></div>
-  <%= yield %>
-   <footer class="footer">
-    <%= image_tag 'icons-1.png' %>
-    <div class="footertxt">Todos os direitos reservados - Meu Peludo</div>
-  </footer>
+<script src="http://www.modernizr.com/downloads/modernizr-2.0.4.js"></script>
+   <%= stylesheet_link_tag    "webflow" %>
+   <%= stylesheet_link_tag    "normalize" %>
+    <%= stylesheet_link_tag    "meupeludov2" %>
+    <%= javascript_include_tag :application %>
+</head>
+<body style="height: 100%;">   
+<div>
+    <div class="w-clearfix topbar">
+      <%= link_to(image_tag('logomini.png'), root_path, :class => "logo") %>
+     <%= link_to "CADASTRAR PET", new_pet_path, class: "button butonmenu" %>
+    </div>
+  </div>
+ <%= yield %>
 </body>
 </html>

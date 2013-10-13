@@ -1,54 +1,52 @@
-﻿
-<p id="notice"><%= notice %></p>
-
-      	<img src="<%= @pet.pet_image %>" alt="" class="circular" />
-
-     		<h1>   <%= @pet.name %></h1>
-      	<div class="span9" id="header_subtitle" >
-      	</div>
-	</div>	  
-  </div>            
-</div>
-
-</div>
-
-
-<br>
-<p>
-  <b>Birthday:</b>
-  <%= @pet.birthday %>
-</p>
-
-
-<p>
-  <b>Breed:</b>
-  <%= @pet.breed %>
-</p>
-
-<p>
-  <b>Gender:</b>
-  <%= @pet.gender %>
-</p>
-
-<p>
-  <b>Hobbies:</b>
-  <%= @pet.hobbies %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @pet.description %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= @pet.pet_image %>
-</p>
-
-<%= @feed %>
-
-
-<% if user_signed_in? %>
-<%= link_to 'Edit', edit_pet_path(@pet) %> |
-<%= link_to 'Back', pets_path %>
-<% end %>
+﻿  <div class="petbackground" style="background-image: url('<%= @pet.profilepic.url %>')">
+    <div class="petbackground overlay">
+      <div class="w-row contentpet">
+        <div class="w-col w-col-1 w-clearfix">
+          <div class="navlateral">
+            <div class="navitem">
+              <div class="navbadge"></div>
+            </div>
+            <div class="navitem selected">
+              <div class="icon-pata"></div>
+              <div class="navtext">PERFIL</div>
+            </div>
+            <div class="navitem">
+              <div class="icon-feed"></div>
+              <div class="navtext dark">FEED</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-col w-col-11">
+          <p id="notice"><%= notice %></p>
+          <div class="petconten">
+            <div class="whiteline"></div>
+            <h1 class="petname"><%= @pet.name %></h1>
+            <h2 class="pettagline"> <%= @pet.description %></h2>
+            <div class="petinfos">
+              <div class="w-row">
+                <div class="w-col w-col-4">
+                  <div class="petinfos item">
+                    <%= image_tag 'icon-coracao.png' %>
+                    <h5 class="petinfos h5"><%= @pet.breed %></h5>
+                  </div>
+                </div>
+                <div class="w-col w-col-4">
+                  <div class="petinfos item">
+                    <%= image_tag 'icon-femea.png' %>
+                    <h5 class="petinfos h5"><%= @pet.gender %></h5>
+                  </div>
+                </div>
+                <div class="w-col w-col-4">
+                  <div class="petinfos item">
+                    <%= image_tag 'icon-idade.png' %>
+                    <h5 class="petinfos h5"><%= @pet.birthday %></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="whiteline"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
