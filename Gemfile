@@ -5,8 +5,11 @@ gem 'bootstrap-sass'
 gem 'devise' 
 gem 'simple_form'
 gem 'paperclip'
+<<<<<<< HEAD
 gem 'carrierwave'
 gem 'wicked'
+=======
+>>>>>>> 3d170c2191ed8b908807fed788712b57ecb2f3d5
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

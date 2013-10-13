@@ -6,6 +6,7 @@
   <script>
    WebFont.load({
         google: {
+<<<<<<< HEAD
           families: ["Open Sans:300,400,600,700,800","Lato:100,300,400,700,900","PT Sans:400,700","Montserrat:400,700"]
         }
       });
@@ -24,5 +25,22 @@
     </div>
   </div>
  <%= yield %>
+=======
+          families: ["Open Sans:300,400,600,700,800","Ubuntu:300,400,500,700","Bitter:400,700","Lato:100,300,400,700,900","Oswald:300,400,700"]
+        }
+      });
+    </script>
+   <%= stylesheet_link_tag    "webflow" %>
+   <%= stylesheet_link_tag    "normalize" %>
+   <%= stylesheet_link_tag    "styledefault" %>
+</head>
+<body>   
+  <div class="topbar"><%= image_tag 'logomini.png' %></div>
+ <%=yield%>
+   <footer class="footer">
+    <%= image_tag 'icons-1.png' %>
+    <div class="footertxt">Todos os direitos reservados - Meu Peludo</div>
+  </footer>
+>>>>>>> 3d170c2191ed8b908807fed788712b57ecb2f3d5
 </body>
 </html>

@@ -14,8 +14,13 @@ class PetsController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
   def show
+<<<<<<< HEAD
     @pet = Pet.find(params[:id])
     @feed = Post.find_by_id(:id)
+=======
+  @pet = Pet.find(params[:id])
+  @feed = Post.find_by_id(:id)
+>>>>>>> 3d170c2191ed8b908807fed788712b57ecb2f3d5
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @pet }
