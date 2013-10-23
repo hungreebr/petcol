@@ -1,0 +1,9 @@
+<div class="container">
+
+
+<%= @petrand.name %> 
+<%= button_to "Like2", vote_battle_path, :confirm => "Are you sure you want to unfriend?", :method => :get, :remote => true %>
+<strong>x</strong> 
+
+<%= @petrand2.name %>
+</div>

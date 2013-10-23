@@ -1,19 +1,18 @@
 body {
-  background-color: #eee;
+  height: 800px;
+  background-color: #f3f2ed;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
   font-size: 12px;
   line-height: 20px;
 }
 h1 {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
-  font-family:'Open Sans', sans-serif;
-  color: black;
-  font-size: 38px;
+  margin: 10px 0px;
+  font-family: Montserrat, sans-serif;
+  font-size: 31px;
   line-height: 44px;
-  font-weight: 300;
+  font-weight: 700;
+  text-align: center;
   letter-spacing: -2px;
 }
 h2 {
@@ -24,9 +23,11 @@ h2 {
 }
 h3 {
   margin: 10px 0px;
-  font-size: 24px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 17px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 300;
+  text-align: center;
 }
 h4 {
   margin: 10px 0px;
@@ -51,167 +52,386 @@ p {
 }
 .button {
   display: inline-block;
-  width: 200px;
-  height: 42px;
-  margin-right: 15px;
-  margin-left: 0px;
-  padding: 12px 15px 4px;
-  background-color: rgba(0, 0, 0, 0);
-  color: #9c9494;
+  width: auto;
+  padding: 15px 30px;
+  border-radius: 6px;
+  background-color: #954a21;
+  color: white;
   text-align: center;
   text-decoration: none;
 }
-.button.style1 {
-  width: 200px;
-  margin-right: 0px;
-  padding-top: 11px;
-  float: none;
+.button.buttoncadastro {
+  font-family:'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.button.buttontopbar {
   border-radius: 4px;
+}
+.button.style1 {
+  width: 150px;
+  border-radius: 5px;
   background-color: #353434;
   font-family:'Open Sans', sans-serif;
-  color: white;
-  font-size: 19px;
-  font-weight: 400;
-  letter-spacing: -1px;
+  font-size: 14px;
+  font-weight: 700;
 }
 .button.transparent {
-  width: auto;
-  float: none;
+  padding-left: 15px;
+  background-color: rgba(0, 0, 0, 0);
   font-family:'Open Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: left;
+  color: #a39e9e;
+  font-size: 14px;
+  font-weight: 700;
 }
-.tophead {
+.topbar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  width: 100%;
+  height: 55px;
+  padding: 10px 30px;
+  background-color: rgba(253, 191, 0, 0.70);
+}
+.navlateral {
+  width: auto;
+  height: 200px;
+  min-height: 100%;
+  margin-top: 150px;
+  margin-left: 5px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.petbackground {
   position: relative;
   left: 0px;
   top: 0px;
   right: 0px;
-  height: 350px;
-  background-image: url(tophead.jpg);
-  background-position: 68% 50%;
-  background-size: cover;
-  background-repeat: no-repeat no-repeat;
+  display: block;
+  height: 900px;
+  min-height: 100%;
+  margin-left: -3px;
+  padding-left: 0px;
+  float: none;
+  background-image: url(577510_10200949334086433_1361649195_n.jpg), url('http://hw-cdn-prod-assets.webflow.com/5258d24ae11bc1bb14000010/996888_10201535071769509_2085431258_n%20(1).jpg'), url(561453_472909459386156_159198346_n.jpg);
+  background-position: 50% 50%, 50% 50%, 50% 50%;
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, scroll;
+  text-align: center;
+}
+.petbackground.overlay {
+  z-index: 0;
+  padding-left: 0px;
+  background-image: url(overlay1.png);
+  background-size: auto;
+  background-repeat: repeat repeat;
   background-attachment: scroll;
 }
-.loginarea {
-  position: relative;
-  top: -203px;
+.petcontent {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+.whiteline {
   display: block;
-  width: 356px;
-  margin-left: 91px;
-  padding: 50px 53px;
-  border-radius: 4px;
-  background-color: #ffcb16;
+  width: 100%;
+  height: 1px;
+  margin: 20px auto 97px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 1px solid white;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(whitespace.jpg);
+  background-repeat: repeat no-repeat;
+  box-shadow: none;
+}
+.petname {
+  display: block;
+  width: auto;
+  height: auto;
+  margin-right: auto;
+  margin-bottom: 81px;
+  padding-top: 0px;
+  font-family: Lato, sans-serif;
+  color: white;
+  font-size: 200px;
+  font-weight: 900;
+  letter-spacing: -14px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+}
+.petconten {
+  position: static;
+  left: 0px;
+  right: 0px;
+  bottom: -250px;
+  display: inline-block;
+  width: auto;
+  max-width: 800px;
+  min-width: 400px;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.pettagline {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 28px auto 15px;
+  padding-left: 0px;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
 }
 .logo {
+  display: inline-block;
+  padding-top: 2px;
+  float: left;
+  background-image: none;
+}
+.contentpet {
+  height: 100%;
+  padding-top: 100px;
+}
+.navitem {
+  width: 115px;
+  height: 115px;
+  margin-top: 5px;
+  padding-top: 17px;
+  background-color: #f8f2ed;
+}
+.navitem.selected {
+  background-color: rgba(159, 79, 31, 0.70);
+}
+.navbadge {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 0px;
+  border: 5px solid #e0e0d0;
+  border-radius: 100px;
+  background-color: white;
+  background-image: url(301195_288547474489023_388241850_n.jpg);
+  background-size: cover;
+}
+.navtext {
+  font-family:'PT Sans', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.navtext.dark {
+  color: #a95b26;
+  letter-spacing: -1px;
+}
+.icon-pata {
+  display: block;
+  width: 44px;
+  height: 42px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  background-image: url(icon-pata.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat no-repeat;
+}
+.icon-feed {
+  display: block;
+  width: 36px;
+  height: 48px;
+  margin: 10px auto 5px;
+  background-image: url(icon-feed.png);
+}
+.petinfos {
+  width: 100%;
+}
+.petinfos.item {
+  display: block;
+  width: auto;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+.petinfos.h5 {
+  position: static;
+  display: inline-block;
+  width: auto;
+  margin-top: 0px;
+  padding-left: 10px;
+  float: none;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+}
+.icon-coracao {
+  display: inline-block;
+  margin-top: -5px;
+  float: none;
+}
+.butonmenu {
+  width: auto;
+  height: 35px;
+  padding-top: 8px;
+  float: right;
+  border-radius: 7px;
+  background-color: #723724;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+}
+.loginbg {
+  height: 100%;
+  background-image: url(background.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+}
+.logoarea {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.logologin {
+  display: block;
+  width: 224px;
+  height: 128px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(logologin.png);
+  background-size: auto;
+  background-repeat: no-repeat no-repeat;
+}
+.h1login {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #772a22;
+  font-size: 36px;
+}
+.h3login {
+  margin-top: -6px;
+  color: #772a22;
+  font-size: 16px;
+}
+.loginleft {
+  text-align: center;
+}
+.loginbox {
+  display: block;
+  width: 410px;
+  height: 400px;
+  max-width: 440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 67px 45px 68px;
+  border: 1px solid #dec203;
+  border-radius: 4px;
+  background-color: rgba(253, 221, 6, 0.70);
+}
+.loginboxh2 {
+  margin-bottom: 25px;
+  font-family:'Open Sans', sans-serif;
+  color: #562924;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: -2px;
+}
+.labellogin {
+  margin-bottom: 1px;
+  font-family:'Open Sans', sans-serif;
+  color: #954a21;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.loginfields {
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(white, #fcf3bf);
+  background-image: -o-linear-gradient(white, #fcf3bf);
+  background-image: linear-gradient(white, #fcf3bf);
+  box-shadow: rgba(209, 194, 84, 0.74) 1px 1px 0px 0px;
+}
+.buttonlogin {
+  width: 95px;
+  height: 40px;
+  padding: 10px 21px;
+  float: left;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(#ffc600, #f8ab00);
+  background-image: -o-linear-gradient(#ffc600, #f8ab00);
+  background-image: linear-gradient(#ffc600, #f8ab00);
+  box-shadow: rgba(214, 162, 3, 0.70) 1px 1px 0px 0px, #fff000 0px 0px 0px 0px;
+  font-family:'Open Sans', sans-serif;
+  color: #772a22;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.passwordremind {
+  margin-left: 19px;
+  padding-top: 12px;
+  float: left;
+  font-family: Lato, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+.overlay {
+  height: 100%;
+  margin-top: 55px;
+  background-image: url(overlay1.png);
+  background-size: auto;
+}
+.header {
+  height: 95px;
+  margin-top: 56px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-width: 0px 0px 1px;
+  border-color: #d8d8d1;
+  background-color: white;
+}
+.h1home {
+  font-family:'Open Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: -3px;
+}
+.addfirstpet {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 50px;
   text-align: center;
 }
-.login {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
+.addfirstpet.call {
+  padding: 30px 50px 10px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 26px;
   letter-spacing: -1px;
-  text-shadow: rgba(191, 159, 46, 0.74) 1px 1px 2px;
-}
-.loginfields {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid white;
-  border-radius: 3px;
-  box-shadow: rgba(191, 159, 46, 0.6) 1px 1px 3px 1px;
-  font-family:'Open Sans', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0px;
-  display: block;
-width: 100%;
-height: 38px;
-padding: 8px 12px;
-margin-bottom: 10px;
-font-size: 14px;
-line-height: 1.428571429;
-color: #555555;
-vertical-align: middle;
-}
-.loginsubmit {
-  width: 100%;
-  border-radius: 3px;
-  background-image: url(arrow-right.png);
-  background-position: 93% 50%;
-  background-size: auto;
-  background-repeat: no-repeat no-repeat;
-  background-attachment: scroll;
-  font-family:'Open Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: left;
-  display: inline-block;
-padding: 12px;
-background-color: black;
-color: white;
-border: 0;
-line-height: inherit;
-}
-.breveblock {
-  position: static;
-  width: auto;
-  max-width: 600px;
-  min-width: 200px;
-  margin-right: 4px;
-  padding-top: 20px;
-  padding-left: 40px;
-  float: none;
-  text-align: left;
-}
-.breve {
-  margin-bottom: 15px;
-  font-family: Bitter, serif;
-  color: white;
-  font-size: 33px;
-  font-weight: 400;
-}
-.brevetxt {
-  font-family: Lato, sans-serif;
-  color: #d1baba;
-  font-size: 17px;
-  line-height: 31px;
-  font-weight: 300;
-}
-.contentblock {
-  position: static;
-  left: 0px;
-  top: 256px;
-  right: 0px;
-  z-index: 0;
-  display: block;
-  overflow: visible;
-  height: 100%;
-  margin-bottom: -50px;
-  padding-bottom: 0px;
-  background-image: url(background.jpg);
-}
-.topbar {
-  height: 120px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-image: url(bgtop.jpg);
-  text-align: center;
-}
-.header {
-  height: 94px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 1px solid #d8d8d1;
-  background-color: white;
-  background-image: none;
-  text-align: center;
 }
 .userbadge {
   display: block;
@@ -219,276 +439,235 @@ line-height: inherit;
   height: 200px;
   margin-right: auto;
   margin-left: auto;
-  border: 15px solid #e0e0d0;
-  border-radius: 100px;
+  border: 4px solid #d8d8d1;
+  border-radius: 200px;
   background-color: #d8d8d1;
-  background-image: url(IMG_5216.JPG);
-  background-position: 50% 50%;
+  background-image: url(301195_288547474489023_388241850_n.jpg);
   background-size: cover;
-  background-repeat: no-repeat no-repeat;
-  background-attachment: scroll;
 }
-.content {
+.centralizar {
+  width: 100%;
   text-align: center;
 }
-.userinfo {
-  display: block;
-  width: auto;
-  margin-right: auto;
-  margin-bottom: 65px;
-  margin-left: auto;
-  padding-top: 50px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.userinfo.usercall {
-  width: 100%;
-  margin-bottom: 35px;
-  padding-top: 25px;
-  font-family:'Open Sans', sans-serif;
-  font-size: 26px;
-  line-height: 32px;
-  font-weight: 400;
-  letter-spacing: -2px;
-}
-.center {
-  display: block;
-  width: 100%;
-  margin-right: auto;
-}
-.divider {
+.divider1 {
   width: 100%;
   height: 2px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #e2e1dc;
+}
+.peludos {
+  text-align: center;
 }
 .peludos.head {
   display: block;
-  width: auto;
-  margin-top: 50px;
+  width: 300px;
   margin-right: auto;
+  margin-bottom: 30px;
   margin-left: auto;
-  background-color: rgba(0, 0, 0, 0);
-}
-.peludos.h4 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family:'Open Sans', sans-serif;
-  font-size: 37px;
-  font-weight: 700;
-  letter-spacing: -3px;
-}
-.peludos.h5 {
-  margin-bottom: 50px;
-  font-family:'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-}
-.peludos.list {
-  display: block;
-  width: auto;
-  margin-right: auto;
-  margin-left: auto;
-  clear: none;
-}
-.peludos.h1 {
-  width: auto;
-  height: auto;
-  padding-top: 77px;
-  box-shadow: none;
-  color: white;
-  font-size: 46px;
-  font-weight: 700;
-  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 6px;
-}
-.peludos:hover.h1:hover {
-  color: white;
-}
-.peludos.h2 {
-  margin-top: 0px;
-  font-family:'Open Sans', sans-serif;
-  color: white;
-  font-size: 19px;
-  font-weight: 400;
-  text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 6px;
-}
-.peludos.h3 {
-  padding-top: 60px;
-  font-family:'Open Sans', sans-serif;
-  color: white;
-  font-size: 31px;
-  line-height: 35px;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.16) 1px 1px 0px;
 }
-.peludos.controls {
+.h2peludos {
+  font-family: Ubuntu, Helvetica, sans-serif;
+  letter-spacing: -1px;
+}
+.h3peludos {
+  margin-top: -16px;
+  font-weight: 400;
+}
+.peludo {
   display: inline-block;
+  text-align: center;
 }
-.petbadge {
-  position: static;
-  display: block;
-  width: 260px;
-  height: 260px;
-  margin-top: 15px;
-  margin-right: auto;
-  margin-left: 20px;
-  border: 20px solid #e0e0d0;
+.peludo.badge {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  margin-right: 40px;
+  border: 4px solid #d8d8d1;
   border-radius: 200px;
-  background-color: #e2e1dc;
-  background-image: url(561453_472909459386156_159198346_n.jpg);
+  background-image: url(8486372502_3b4b158735_b.jpg);
+  background-position: 50% 50%;
   background-size: cover;
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
 }
-.petbadge:hover {
-  border-color: #404041;
-  -webkit-transform: scale(1.12);
-  -ms-transform: scale(1.12);
-  -o-transform: scale(1.12);
-  transform: scale(1.12);
+.peludo.h1 {
+  margin-top: 90px;
+  color: white;
+  font-size: 48px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 0px 5px;
 }
-.petbadge.toto {
-  display: block;
-  margin-top: 1px;
-  margin-right: auto;
-  margin-left: auto;
-  background-image: url(5561147907_d81807d500_o.jpg);
-}
-.petbadge:hover.toto:hover {
-  -webkit-transform: scale(1.12);
-  -ms-transform: scale(1.12);
-  -o-transform: scale(1.12);
-  transform: scale(1.12);
-}
-.petbadge.addpet {
-  border-width: 1px;
-  border-color: rgba(0, 0, 0, 0);
-  background-image: none;
-}
-.footer {
-  position: relative;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  overflow: visible;
-  height: 90px;
-  margin-top: 50px;
-  padding-top: 25px;
-  clear: none;
-  background-color: #404041;
-  box-shadow: black 0px 1px 21px -3px inset;
-  text-align: center;
-}
-.controls {
-  margin-top: 20px;
-  font-family:'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-}
-.controls:hover {
-  font-weight: 600;
-}
-.footertxt {
-  display: inline-block;
-  margin-left: 24px;
-  float: none;
+.peludo.h2 {
+  margin-top: -10px;
   font-family:'Open Sans', sans-serif;
   color: white;
-  font-size: 13px;
+  font-size: 25px;
   font-weight: 300;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 0px 4px;
 }
 @media (max-width: 991px) {
-  .loginarea {
-    margin-left: 15px;
+  .navlateral {
+    margin-left: 2px;
   }
-  .login {
-    font-family: Ubuntu, Helvetica, sans-serif;
-    font-weight: 700;
-    text-shadow: rgba(191, 159, 46, 0.74) 1px 1px 2px;
+  .petbackground {
+    height: 100%;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
   }
-  .loginsubmit {
-    background-image: url(arrow-right.png);
-    background-position: 93% 50%;
+  .petname {
+    font-size: 150px;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
   }
-  .breveblock {
-    padding-left: 0px;
+  .petconten {
+    top: -250px;
   }
-  .breve {
+  .pettagline {
     margin-top: -10px;
-    font-size: 24px;
+    padding-left: 0px;
+    font-size: 18px;
+    letter-spacing: 0px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
   }
-  .brevetxt {
-    margin-top: -16px;
-    font-size: 16px;
-    line-height: 30px;
+  .petinfos.h5 {
+    font-size: 14px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .loginbg {
+    background-image: url(background.jpg);
+    background-position: 50% 50%;
+  }
+  .logoarea {
+    padding-top: 28px;
+  }
+  .h1login {
+    font-size: 26px;
+  }
+  .h3login {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .loginbox {
+    width: auto;
+    max-width: 440px;
   }
 }
 @media (max-width: 767px) {
-  .tophead {
-    background-position: 100% 50%;
-  }
-  .loginarea {
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .breveblock {
+  .navlateral {
     display: block;
-    max-width: 356px;
-    margin-top: -150px;
+    width: 300px;
+    height: 150px;
+    margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
+    float: none;
   }
-}
-@media (max-width: 479px) {
-  h1 {
-    font-size: 24px;
+  .petbackground {
+    height: 100%;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
   }
-  .tophead {
-    background-image: url(tophead.jpg);
-    background-position: 79% 50%;
+  .whiteline {
+    height: 3px;
   }
-  .loginarea {
+  .petname {
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .petconten {
+    margin-top: -30px;
+  }
+  .navitem {
+    position: static;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    margin-top: 0px;
+    margin-right: 5px;
+    padding-top: 0px;
+    padding-right: 0px;
+    float: left;
+  }
+  .navitem.selected {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .navbadge {
+    width: 50px;
+    height: 50px;
+    margin-top: 18px;
+    background-image: url(301195_288547474489023_388241850_n.jpg);
+  }
+  .icon-pata {
+    margin-top: 7px;
+    background-image: url(icon-pata.png);
+    background-position: 50% 50%;
+  }
+  .icon-feed {
+    margin-top: 10px;
+    background-image: url(icon-feed.png);
+  }
+  .colunaleft {
+    padding-top: 1px;
+  }
+  .center {
+    display: block;
     width: 300px;
     margin-right: auto;
     margin-left: auto;
+    text-align: right;
   }
-  .breve {
-    font-size: 21px;
+  .loginbg {
+    background-image: url(background.jpg);
+    background-position: 50% 50%;
   }
-  .brevetxt {
+  .logoarea {
+    padding-bottom: 30px;
+  }
+  .loginbox {
+    max-width: 440px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 479px) {
+  .topbar {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .navlateral {
+    width: 285px;
+  }
+  .petbackground {
+    height: 100%;
+    background-image: url(561453_472909459386156_159198346_n.jpg);
+    background-position: 50% 50%;
+  }
+  .whiteline {
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+  .petname {
+    margin-bottom: 35px;
+    font-size: 70px;
+    letter-spacing: -3px;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .petconten {
+    max-width: 480px;
+    min-width: 1px;
+  }
+  .pettagline {
     font-size: 15px;
-    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
   }
-  .peludos.h5 {
-    line-height: 24px;
+  .icon-feed {
+    height: 48px;
+    background-image: url(icon-feed.png);
   }
-}
-.section {
-  padding-top: 40px;
-  padding-right: 80px;
-  padding-left: 80px;
-  text-align: center;
-}
-.fieldstyle1 {
-  display: block;
-  width: 450px;
-  height: 100px;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) black;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: transparent 0px 1px 0px 0px inset;
-  font-family: Open Sans, sans-serif;
-  color: black;
-font-size: 80px;
-font-weight: bold;
-letter-spacing: -7px;
-}
+  .butonmenu {
+    width: auto;
+    font-size: 11px;
+  }
+  .loginbg {
+    background-image: url(background.jpg);
+    background-position: 50% 50%;
+  }

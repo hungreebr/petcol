@@ -1,0 +1,12 @@
+<div class="container">
+<%= notice %>
+
+<%= @petrand1.name %> 
+<%= link_to "up", vote_battle_path(@petrand1) %>
+<%= pluralize @petrand1.votes, "vote" %>
+<strong>x</strong> 
+
+<%= @petrand2.name %>
+<%= link_to "up", vote_battle_path(@petrand2) %>
+<%= pluralize @petrand2.votes, "vote" %>
+</div>

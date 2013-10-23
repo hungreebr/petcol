@@ -1,5 +1,6 @@
 body {
-  height: 410px;
+  height: 800px;
+  background-color: #f3f2ed;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
   font-size: 12px;
@@ -7,9 +8,12 @@ body {
 }
 h1 {
   margin: 10px 0px;
-  font-size: 38px;
+  font-family: Montserrat, sans-serif;
+  font-size: 31px;
   line-height: 44px;
   font-weight: 700;
+  text-align: center;
+  letter-spacing: -2px;
 }
 h2 {
   margin: 10px 0px;
@@ -19,9 +23,11 @@ h2 {
 }
 h3 {
   margin: 10px 0px;
-  font-size: 24px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 17px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: 300;
+  text-align: center;
 }
 h4 {
   margin: 10px 0px;
@@ -46,11 +52,38 @@ p {
 }
 .button {
   display: inline-block;
-  padding: 4px 15px;
-  background-color: black;
+  width: auto;
+  padding: 15px 30px;
+  border-radius: 6px;
+  background-color: #954a21;
   color: white;
   text-align: center;
   text-decoration: none;
+}
+.button.buttoncadastro {
+  font-family:'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+.button.buttontopbar {
+  border-radius: 4px;
+}
+.button.style1 {
+  width: 150px;
+  border-radius: 5px;
+  background-color: #353434;
+  font-family:'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+.button.transparent {
+  padding-left: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  font-family:'Open Sans', sans-serif;
+  color: #a39e9e;
+  font-size: 14px;
+  font-weight: 700;
 }
 .topbar {
   position: fixed;
@@ -60,26 +93,18 @@ p {
   z-index: 1000;
   width: 100%;
   height: 55px;
-  padding: 12px 30px 0px;
+  padding: 10px 30px;
   background-color: rgba(253, 191, 0, 0.70);
 }
 .navlateral {
   width: auto;
   height: 200px;
   min-height: 100%;
-  margin-top: 220px;
+  margin-top: 150px;
   margin-left: 5px;
   float: left;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
-}
-.lateral {
-  padding-left: 0px;
-}
-.container {
-  height: 100%;
-  padding-left: 0px;
-  margin-top: 70px;
 }
 .petbackground {
   position: relative;
@@ -87,42 +112,25 @@ p {
   top: 0px;
   right: 0px;
   display: block;
-  height: 100%;
+  height: 900px;
   min-height: 100%;
-  margin-top: -20px;
+  margin-left: -3px;
   padding-left: 0px;
   float: none;
-  background-image: url(561453_472909459386156_159198346_n.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat no-repeat;
-  background-attachment: scroll;
+  background-image: url(577510_10200949334086433_1361649195_n.jpg), url('http://hw-cdn-prod-assets.webflow.com/5258d24ae11bc1bb14000010/996888_10201535071769509_2085431258_n%20(1).jpg'), url(561453_472909459386156_159198346_n.jpg);
+  background-position: 50% 50%, 50% 50%, 50% 50%;
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, scroll;
   text-align: center;
 }
 .petbackground.overlay {
+  z-index: 0;
   padding-left: 0px;
   background-image: url(overlay1.png);
   background-size: auto;
   background-repeat: repeat repeat;
   background-attachment: scroll;
-}
-.centro {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-.fullcontent {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  min-width: 100%;
-}
-.ownername {
-  margin-top: -25px;
-  font-family:'Open Sans', sans-serif;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0px;
 }
 .petcontent {
   position: static;
@@ -132,20 +140,18 @@ p {
   bottom: 0px;
   text-align: center;
 }
-.petcontent.text {
-  padding-top: 238px;
-}
 .whiteline {
   display: block;
   width: 100%;
   height: 1px;
-  margin: 20px auto 80px;
+  margin: 20px auto 97px;
   padding-top: 0px;
   padding-bottom: 0px;
   border: 1px solid white;
   border-radius: 100px;
   background-color: rgba(0, 0, 0, 0);
-  background-image: none;
+  background-image: url(whitespace.jpg);
+  background-repeat: repeat no-repeat;
   box-shadow: none;
 }
 .petname {
@@ -153,7 +159,7 @@ p {
   width: auto;
   height: auto;
   margin-right: auto;
-  margin-bottom: 95px;
+  margin-bottom: 81px;
   padding-top: 0px;
   font-family: Lato, sans-serif;
   color: white;
@@ -161,9 +167,6 @@ p {
   font-weight: 900;
   letter-spacing: -14px;
   text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
-}
-.petcontentarea {
-  width: 50%;
 }
 .petconten {
   position: static;
@@ -174,7 +177,7 @@ p {
   width: auto;
   max-width: 800px;
   min-width: 400px;
-  margin-top: 220px;
+  margin-top: 150px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 0px;
@@ -194,24 +197,15 @@ p {
   letter-spacing: -1px;
   text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
 }
-.barafooter {
-  width: 100%;
-  height: 50px;
-  background-color: black;
-}
 .logo {
   display: inline-block;
+  padding-top: 2px;
   float: left;
-}
-.usernav {
-  width: 150px;
-  height: 60px;
-  margin-top: -12px;
-  float: right;
-  background-color: #472d0f;
+  background-image: none;
 }
 .contentpet {
   height: 100%;
+  padding-top: 100px;
 }
 .navitem {
   width: 115px;
@@ -263,9 +257,7 @@ p {
   display: block;
   width: 36px;
   height: 48px;
-  margin-right: auto;
-  margin-bottom: 5px;
-  margin-left: auto;
+  margin: 10px auto 5px;
   background-image: url(icon-feed.png);
 }
 .petinfos {
@@ -299,7 +291,7 @@ p {
   float: none;
 }
 .butonmenu {
-  width: 150px;
+  width: auto;
   height: 35px;
   padding-top: 8px;
   float: right;
@@ -307,6 +299,211 @@ p {
   background-color: #723724;
   font-family: Montserrat, sans-serif;
   font-size: 13px;
+}
+.loginbg {
+  height: 100%;
+  background-image: url(background.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+}
+.logoarea {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.logologin {
+  display: block;
+  width: 224px;
+  height: 128px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url(logologin.png);
+  background-size: auto;
+  background-repeat: no-repeat no-repeat;
+}
+.h1login {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #772a22;
+  font-size: 36px;
+}
+.h3login {
+  margin-top: -6px;
+  color: #772a22;
+  font-size: 16px;
+}
+.loginleft {
+  text-align: center;
+}
+.loginbox {
+  display: block;
+  width: 410px;
+  height: 400px;
+  max-width: 440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 67px 45px 68px;
+  border: 1px solid #dec203;
+  border-radius: 4px;
+  background-color: rgba(253, 221, 6, 0.70);
+}
+.loginboxh2 {
+  margin-bottom: 25px;
+  font-family:'Open Sans', sans-serif;
+  color: #562924;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: -2px;
+}
+.labellogin {
+  margin-bottom: 1px;
+  font-family:'Open Sans', sans-serif;
+  color: #954a21;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.loginfields {
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(white, #fcf3bf);
+  background-image: -o-linear-gradient(white, #fcf3bf);
+  background-image: linear-gradient(white, #fcf3bf);
+  box-shadow: rgba(209, 194, 84, 0.74) 1px 1px 0px 0px;
+}
+.buttonlogin {
+  width: 95px;
+  height: 40px;
+  padding: 10px 21px;
+  float: left;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(#ffc600, #f8ab00);
+  background-image: -o-linear-gradient(#ffc600, #f8ab00);
+  background-image: linear-gradient(#ffc600, #f8ab00);
+  box-shadow: rgba(214, 162, 3, 0.70) 1px 1px 0px 0px, #fff000 0px 0px 0px 0px;
+  font-family:'Open Sans', sans-serif;
+  color: #772a22;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+.passwordremind {
+  margin-left: 19px;
+  padding-top: 12px;
+  float: left;
+  font-family: Lato, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0px;
+}
+.overlay {
+  height: 100%;
+  margin-top: 55px;
+  background-image: url(overlay1.png);
+  background-size: auto;
+}
+.header {
+  height: 95px;
+  margin-top: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-width: 0px 0px 1px;
+  border-color: #d8d8d1;
+  background-color: white;
+}
+.h1home {
+  font-family:'Open Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: -3px;
+}
+.addfirstpet {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 50px;
+  text-align: center;
+}
+.addfirstpet.call {
+  padding: 30px 50px 10px;
+  font-family:'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 26px;
+  letter-spacing: -1px;
+}
+.userbadge {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 4px solid #d8d8d1;
+  border-radius: 200px;
+  background-color: #d8d8d1;
+  background-image: url(301195_288547474489023_388241850_n.jpg);
+  background-size: cover;
+}
+.centralizar {
+  width: 100%;
+  text-align: center;
+}
+.divider1 {
+  width: 100%;
+  height: 2px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #e2e1dc;
+}
+.peludos {
+  text-align: center;
+}
+.peludos.head {
+  display: block;
+  width: 300px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  text-align: center;
+}
+.h2peludos {
+  font-family: Ubuntu, Helvetica, sans-serif;
+  letter-spacing: -1px;
+}
+.h3peludos {
+  margin-top: -16px;
+  font-weight: 400;
+}
+.peludo {
+  display: inline-block;
+  text-align: center;
+}
+.peludo.badge {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  margin-right: 40px;
+  border: 4px solid #d8d8d1;
+  border-radius: 200px;
+  background-image: url(8486372502_3b4b158735_b.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.peludo.h1 {
+  margin-top: 90px;
+  color: white;
+  font-size: 48px;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 0px 5px;
+}
+.peludo.h2 {
+  margin-top: -10px;
+  font-family:'Open Sans', sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.49) 0px 0px 4px;
 }
 @media (max-width: 991px) {
   .navlateral {
@@ -335,6 +532,24 @@ p {
   .petinfos.h5 {
     font-size: 14px;
     text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
+  }
+  .loginbg {
+    background-image: url(background.jpg);
+    background-position: 50% 50%;
+  }
+  .logoarea {
+    padding-top: 28px;
+  }
+  .h1login {
+    font-size: 26px;
+  }
+  .h3login {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .loginbox {
+    width: auto;
+    max-width: 440px;
   }
 }
 @media (max-width: 767px) {
@@ -401,6 +616,17 @@ p {
     margin-left: auto;
     text-align: right;
   }
+  .loginbg {
+    background-image: url(background.jpg);
+    background-position: 50% 50%;
+  }
+  .logoarea {
+    padding-bottom: 30px;
+  }
+  .loginbox {
+    max-width: 440px;
+    margin-top: 20px;
+  }
 }
 @media (max-width: 479px) {
   .topbar {
@@ -440,5 +666,9 @@ p {
   .butonmenu {
     width: auto;
     font-size: 11px;
+  }
+  .loginbg {
+    background-image: url(background.jpg);
+    background-position: 50% 50%;
   }
 }

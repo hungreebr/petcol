@@ -1,47 +1,39 @@
-﻿<div class="header">
-    	<h1><strong>Seja bem vindo</strong> ao Meu Peludo</h1>
-</div>
-  <div style="background-color: #eee;">
-    <div class="w-container content">
-      <div class="userinfo">
+﻿  <div class="header">
+    <h1 class="h1home"><strong>Seja bem vindo </strong>ao Meu Peludo</h1>
+  </div>
+  <div>
+    <div class="w-container">
+      <div class="addfirstpet">
         <div class="userbadge"></div>
-        <p class="userinfo usercall"><strong><%= current_user.first_name %></strong>,
-          <br>deseja cadastrar seu peludo?</p>
-        <div class="center"><%= link_to "QUERO!", new_pet_path, class: "button style1" %><a class="button transparent" href="#">AINDA NÃO.</a>
-        </div>
       </div>
-      <div class="divider"></div>
-      <div class="peludos">	
+      <p class="addfirstpet call"><strong><%= current_user.first_name %></strong>,
+        <br>deseja cadastrar seu peludo?</p>
+      <div class="centralizar"><%= link_to "Quero!", pet_steps_path, class: "button style1" %><a class="button transparent" href="#">Ainda não.</a>
+      </div>
+      <div class="divider1"></div>
+       <div class="peludos">
         <div class="peludos head">
-          <%= image_tag 'icon-paw.png' %>
-          <h4 class="peludos h4">Meus peludos</h4>
-          <h5 class="peludos h5">Seus pets que já estão conectados</h5>
-          <div class="peludos list">
-          	<% if @pets %>
-				<% @pets.each do |pet| %>
-			 		<div class="peludos controls">
-             			<div class="petbadge" style="background-image: url('<%= pet.profilepic.url %>')">
-                			<div class="badgeinfo">
-
-                  				<h1 class="peludos h1"><%= pet.name %></h1>
-                 				<h2 class="peludos h2"><% if pet.gender == "Male" %>
-                 											O <%= pet.breed %>
-                 										<% else %>
-                 											A <%= pet.breed %>
-                 										<% end -%>
-                 										</h2>
-                			</div>
-              			</div>
-              			<div class="controls">
-              				<br><%= link_to 'Ver Perfil', pet_path(pet) %>
-                			<br><%= link_to 'Editar Perfil', edit_pet_path(pet) %>
-                			<br><%= link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
-                		</div>
-           			</div>
-				<% end %>
-			<% end %>
-          </div>
+          <%= image_tag 'icon-paw.png' %> 
+          <h2 class="h2peludos">Meus Peludos</h2>
+          <h3 class="h3peludos">Seus pets que já estão conectados</h3>
         </div>
-      </div>
+        <% if @pets %>
+        <% @pets.each do |pet| %>
+        <div class="peludo">
+          <div class="peludo badge" style="background-image: url('<%= pet.profilepic.url %>')">
+            <h1 class="peludo h1"><%= pet.name %></h1>
+            <h2 class="peludo h2"><% if pet.gender == "Male" %>
+                                      O <%= pet.breed %>
+                                    <% else %>
+                                      A <%= pet.breed %>
+                                    <% end -%></h2>
+          </div>
+          <br><%= link_to 'Ver Perfil', pet_path(pet) %>
+          <br><% link_to 'Editar Perfil', edit_pet_path(pet) %>
+          <br><% link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
+        </div>
+      </div>  <% end %>
+      <% end %>
     </div>
   </div>
+

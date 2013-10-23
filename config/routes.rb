@@ -4,8 +4,12 @@ Petcol::Application.routes.draw do
   resources :pet_steps
 
   resources :pets
-
-
+  resources :battle do 
+      put "like", to: "battle#voteup"
+  end  
+ resources :battles do 
+  member { get :vote }
+end
 
   devise_for :users
 

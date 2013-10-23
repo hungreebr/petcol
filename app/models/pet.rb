@@ -3,7 +3,10 @@ class Pet < ActiveRecord::Base
   belongs_to :user
   has_many :posts
   has_attached_file :profilepic
-  
 
+  def vote!
+  	self.votes += 1
+  	self.save
+  end
 
 end
