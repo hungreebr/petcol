@@ -16,5 +16,7 @@
 //= require bootstrap
 //= require_tree .
 //= require_webflow
+//= require nlform
+//= require modernizr.custom
 jQuery ->
   $('#cropbox').Jcrop()

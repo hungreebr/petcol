@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'paperclip'
 gem 'wicked'
 gem 'carrierwave'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

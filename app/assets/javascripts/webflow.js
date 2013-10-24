@@ -308,6 +308,9 @@ var _w = (function(){
     return typeof __wf_design != 'undefined';
   }
 
+$( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
   // API
   return {
     init: init,
