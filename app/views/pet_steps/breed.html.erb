@@ -1,8 +1,5 @@
-<%= simple_form_for @pet, url: wizard_path, :input_html => { :multipart => true } do |f| %>
+<%= render layout: 'form' do |f| %>
  <h1>Tell us a little about yourself.</h1>
 <%= f.input :breed, label: false, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
 <%= f.file_field :profilepic %>
-  <div class="actions">
-        <%= f.submit "Continue" %>
-  </div>
 <% end %>

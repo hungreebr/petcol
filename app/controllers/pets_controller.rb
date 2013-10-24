@@ -36,18 +36,17 @@ class PetsController < ApplicationController
 
   # GET /pets/1/edit
   def edit
-    @pet = Pet.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     @author_id = current_user.id
   end
 
   # POST /pets
   # POST /pets.json
   def create
-    @author_id = current_user.id
     @pet = Pet.new(params[:pet])
 		if @pet.save
-        session[:pet_id] = @pet.id
-			   redirect_to pet_steps_path
+      session[:pet_id] = @pet.id
+			redirect_to pet_steps_path(:pet_id => @pet.id)
 		else
 			render :new
     end
@@ -57,7 +56,7 @@ class PetsController < ApplicationController
   # PUT /pets/1
   # PUT /pets/1.json
   def update
-    @pet = Pet.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     if @pet.update_attributes(params[:pet])
 		  if params[:pet][:pet_image].present?
 				render :crop	

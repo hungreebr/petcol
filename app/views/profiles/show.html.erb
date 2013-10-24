@@ -8,7 +8,7 @@
       </div>
       <p class="addfirstpet call"><strong><%= current_user.first_name %></strong>,
         <br>deseja cadastrar seu peludo?</p>
-      <div class="centralizar"><%= link_to "Quero!", pet_steps_path, class: "button style1" %><a class="button transparent" href="#">Ainda não.</a>
+      <div class="centralizar"><%= link_to "Quero!", new_pet_path, class: "button style1" %><a class="button transparent" href="#">Ainda não.</a>
       </div>
       <div class="divider1"></div>
        <div class="peludos">
@@ -19,21 +19,22 @@
         </div>
         <% if @pets %>
         <% @pets.each do |pet| %>
-        <div class="peludo">
-          <div class="peludo badge" style="background-image: url('<%= pet.profilepic.url %>')">
-            <h1 class="peludo h1"><%= pet.name %></h1>
-            <h2 class="peludo h2"><% if pet.gender == "Male" %>
+          <div class="peludo">
+            <div class="peludo badge" style="background-image: url('<%= pet.profilepic.url %>')">
+              <h1 class="peludo h1"><%= pet.name %></h1>
+              <h2 class="peludo h2"><% if pet.gender == "Male" %>
                                       O <%= pet.breed %>
                                     <% else %>
                                       A <%= pet.breed %>
                                     <% end -%></h2>
-          </div>
+            </div>
           <br><%= link_to 'Ver Perfil', pet_path(pet) %>
           <br><% link_to 'Editar Perfil', edit_pet_path(pet) %>
           <br><% link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
         </div>
-      </div>  <% end %>
+        <% end %>
       <% end %>
+      </div>  
     </div>
   </div>
 
