@@ -22,7 +22,7 @@
           <div class="peludo">
             <div class="peludo badge" style="background-image: url('<%= pet.profilepic.url %>')">
               <h1 class="peludo h1"><%= pet.name %></h1>
-              <h2 class="peludo h2"><% if pet.gender == "Male" %>
+              <h2 class="peludo h2"><% if pet.gender == "um macho" %>
                                       O <%= pet.breed %>
                                     <% else %>
                                       A <%= pet.breed %>
@@ -30,7 +30,7 @@
             </div>
           <br><%= link_to 'Ver Perfil', pet_path(pet) %>
           <br><% link_to 'Editar Perfil', edit_pet_path(pet) %>
-          <br><% link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
+          <br><%= link_to 'Deletar animal', pet, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir esse pet? Todos os dados serão perdidos' } %>
         </div>
         <% end %>
       <% end %>
