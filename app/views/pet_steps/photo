@@ -1,0 +1,5 @@
+<%= render layout: 'form' do |f| %>
+ <h1>Insira a Foto do Seu pet!</h1>
+<%= f.input :breed, label: false, input_html:  { class: 'w-input-clean fieldstyle1'}  %>
+<%= f.file_field :profilepic %>
+<% end %>

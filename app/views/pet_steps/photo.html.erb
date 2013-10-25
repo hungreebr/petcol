@@ -1,0 +1,18 @@
+<%= render layout: 'form' do |f| %>
+<%= content_for :formstyle do %> 
+  <%= stylesheet_link_tag    "basestyle" %>
+  <%= javascript_include_tag	"nlform" %>
+  <%= javascript_include_tag	"modernizr.custom" %>
+  		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+
+<%end%>
+<div class="content wrapper" style="margin: 100px; text-align: center;">
+ <h1 style="margin-bottom: 30px;">Insira a Foto do Seu pet!</h1>
+<%= f.file_field :profilepic %>
+<br>
+<br>
+<br>
+<% end %>
+</div>

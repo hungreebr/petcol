@@ -21,11 +21,12 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-family: Open Sans, sans-serif; 
 	color: #ffe8e7;
-	background: #E96D65;
+	background: #723724;
 	font-weight: 300;
 	overflow-x: hidden;
+	height: 90%;
 }
 
 a {
@@ -154,10 +155,14 @@ a:active {
 
 /* general style for the form */
 .nl-form {
-	width: 100%;
+	max-width: 550px;
 	margin: 0.3em auto 0 auto;
-	font-size: 4em;
+	font-size: 2em;
 	line-height: 1.5;
+	font-family: Open Sans, sans-serif;
+	margin-top: 100px;
+	letter-spacing: -2px;
+	text-align: center;
 }
 
 .nl-form ul {
@@ -182,6 +187,7 @@ a:active {
 	margin: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+
 }
 
 .nl-form input:focus {
@@ -207,6 +213,7 @@ a:active {
 	color: #b14943;
 	cursor: pointer;
 	border-bottom: 1px dashed #b14943;
+	text-align: center;
 }
 
 /* drop-down list / text element */
@@ -365,32 +372,33 @@ input:focus::-ms-input-placeholder {
 	text-transform: uppercase;
 	cursor: pointer;
 	position: relative;
-	background: #76C3BD;
-	color: #fff;
-	padding: 0 1em 0 0;
+	background: rgba(253, 191, 0, 1);
+	color: black;
 	font-size: 40%;
 	font-weight: bold;
 	letter-spacing: 3px;
+	padding: 1em 3em;
+	margin-top: 15px;
 }
 
-.nl-submit:before {
-	content: "\e001";
-	color: #fff;
-	float: left;
-	padding: 0 0.7em;
-	margin: 0 0.8em 0 0;
-	background: #69B1A9;
-}
+
 
 .no-touch .nl-form .nl-submit:hover,
 .no-touch .nl-form .nl-submit:active {
-	background: #69B1A9;
+background: rgba(0, 0, 0, 0.5);
+color: rgba(253, 191, 0, 1);
 }
+
 
 .no-touch .nl-form .nl-submit:hover:before {
 	background: #58a199;
 }
 
+.nl-form select:focus {
+	background: #723724;
+	border: 0px;
+	border-color: transparent;
+}
 /* overlay becomes visible when a field is opened */
 .nl-overlay {
 	position: fixed;
