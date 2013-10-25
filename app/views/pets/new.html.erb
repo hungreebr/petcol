@@ -1,14 +1,98 @@
+<%= content_for :formstyle do %> 
   <%= stylesheet_link_tag    "basestyle" %>
+  <%= javascript_include_tag	"nlform" %>
+  <%= javascript_include_tag	"modernizr.custom" %>
+  		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+
+<%end%>
 <div class="w-container content">
 	<div class="section">
 		<div class="container">
 			<h1>Qual o nome do seu peludo?</h1>
 <%= simple_form_for @pet, input_html: { multipart: true }, :html => {:id => 'nl-form', :class => 'nl-form'} do |f| %>
   <%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :name, label: false, input_html: {  placeholder: 'Digite Aqui', maxlength: 20, size: 20 } %>
+  <div class="form-inputs" style="max-width: 50em;">
+  	<% @genders = ['um macho','uma fêmea'] %>
+  Meu pet é <%= f.input :gender, label: false, collection: @genders, :html => { placeholder: 'Digite Aqui'} %> chamado <%= f.input :name, label: false, input_html: {  placeholder: 'Digite Aqui', maxlength: 20, size: 20 } %>
     <%= f.button :submit, 'Enviar' %>
 </div>
 </div>
 </div>
 <% end %>
+
+<div class="main clearfix">
+				<%= simple_form_for @pet, input_html: { multipart: true }, :html => {:id => 'nl-form', :class => 'nl-form'} do |f| %>
+					Eu tenho um pet chamado <%= f.input :name, label: false, input_html: {  placeholder: 'Digite Aqui', maxlength: 20, size: 20 } %>
+					<select>
+						<option value="1" selected>any food</option>
+						<option value="2">Indian</option>
+						<option value="3">French</option>
+						<option value="4">Japanese</option>
+						<option value="2">Italian</option>
+					</select>
+					<br />in a
+					<select>
+						<option value="1" selected>standard</option>
+						<option value="2">fancy</option>
+						<option value="3">hip</option>
+						<option value="4">traditional</option>
+						<option value="2">romantic</option>
+					</select>
+					restaurant
+					<br />at 
+					<select>
+						<option value="1" selected>anytime</option>
+					 	<option value="1">7 p.m.</option>
+					 	<option value="2">8 p.m.</option>
+					 	<option value="3">9 p.m.</option>
+					</select>
+					in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Find a restaurant</button>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+		</div><!-- /container --><% end %>
+<div class="main clearfix">
+				<form id="nl-form" class="nl-form">
+					I feel to eat 
+					<select>
+						<option value="1" selected>any food</option>
+						<option value="2">Indian</option>
+						<option value="3">French</option>
+						<option value="4">Japanese</option>
+						<option value="2">Italian</option>
+					</select>
+					<br />in a
+					<select>
+						<option value="1" selected>standard</option>
+						<option value="2">fancy</option>
+						<option value="3">hip</option>
+						<option value="4">traditional</option>
+						<option value="2">romantic</option>
+					</select>
+					restaurant
+					<br />at 
+					<select>
+						<option value="1" selected>anytime</option>
+					 	<option value="1">7 p.m.</option>
+					 	<option value="2">8 p.m.</option>
+					 	<option value="3">9 p.m.</option>
+					</select>
+					in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Find a restaurant</button>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+		</div><!-- /container -->
+		<script src="js/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body>
+</html>

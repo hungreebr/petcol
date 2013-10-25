@@ -1,7 +1,7 @@
 class PetStepsController < ApplicationController
 include Wicked::Wizard
-steps :name, :breed
-  
+steps :breed,:name
+
   def show
  	@pet = Pet.last
     @author_id = current_user.id
