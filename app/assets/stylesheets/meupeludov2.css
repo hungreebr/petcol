@@ -106,13 +106,12 @@ p {
   width: 100%;
   height: 55px;
   padding: 10px 30px;
-  background-color: rgba(253, 191, 0, 0.70);
+  background-color: rgba(253, 191, 0, 1);
 }
 .navlateral {
   width: auto;
   height: 200px;
   min-height: 100%;
-  margin-top: 150px;
   margin-left: 25px;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
@@ -189,12 +188,11 @@ text-align: left;
   width: auto;
   max-width: 800px;
   min-width: 400px;
-  margin-top: 150px;
-  margin-right: 20px;
   margin-left: auto;
   padding-top: 0px;
   padding-right: 0px;
   background-color: rgba(0, 0, 0, 0);
+  float: right;
 }
 .pettagline {
   display: block;
@@ -216,8 +214,15 @@ text-align: left;
   background-image: none;
 }
 .contentpet {
-  height: 100%;
-  padding-top: 100px;
+height: 300px;
+position: absolute;
+top: 0;
+margin: auto;
+width: 100%;
+padding-right: 30px;
+margin-top: 200px;
+top: 50%;
+margin-top: -50px;
 }
 .navitem {
   width: 115px;
@@ -246,7 +251,7 @@ text-align: left;
 .navtext {
   font-family:'PT Sans', sans-serif;
   color: white;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0px;
 }
