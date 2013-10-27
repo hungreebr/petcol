@@ -6,6 +6,31 @@ body {
   font-size: 12px;
   line-height: 20px;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height:0px;
+ background-color: #666;
+
+}
+::-webkit-scrollbar-track {
+  background:#3C3737;
+  border: 0;
+  border-radius:0px;
+  height: 100%;
+}
+::-webkit-scrollbar-thumb {
+  background:#999;
+  border: thin solid transparent;
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#7d7d7d;
+}     
+
+    
 .wrapper {min-height: 34em;
 -webkit-transition: all .25s ease-out;
 -moz-transition: all .25s ease-out;
@@ -97,6 +122,21 @@ p {
   font-size: 14px;
   font-weight: 700;
 }
+.button.buttonuser {
+  height: 40px;
+  margin-top: -3px;
+  padding-top: 11px;
+  float: right;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(button-2.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  font-family:'Open Sans', sans-serif;
+  color: #723724;
+  font-size: 11px;
+  font-weight: 700;
+}
 .topbar {
   position: fixed;
   left: 0px;
@@ -127,7 +167,6 @@ p {
   margin-left: -3px;
   padding-left: 0px;
   float: none;
-  background-image: url(577510_10200949334086433_1361649195_n.jpg), url('http://hw-cdn-prod-assets.webflow.com/5258d24ae11bc1bb14000010/996888_10201535071769509_2085431258_n%20(1).jpg'), url(561453_472909459386156_159198346_n.jpg);
   background-position: 50% 50%, 50% 50%, 50% 50%;
   background-size: cover, cover, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
@@ -177,22 +216,23 @@ font-size: 200px;
 font-weight: 900;
 letter-spacing: -14px;
 text-shadow: rgba(0, 0, 0, 0.49) 0px 1px 7px;
-text-align: left;
+text-align: center;
 }
 .petconten {
-  position: static;
-  left: 0px;
-  right: 0px;
-  bottom: -250px;
-  display: inline-block;
-  width: auto;
-  max-width: 800px;
-  min-width: 400px;
-  margin-left: auto;
-  padding-top: 0px;
-  padding-right: 0px;
-  background-color: rgba(0, 0, 0, 0);
-  float: right;
+position: static;
+left: 0px;
+right: 0px;
+bottom: -250px;
+display: inline-block;
+width: auto;
+max-width: 950px;
+min-width: 400px;
+margin-left: auto;
+padding-top: 0px;
+padding-right: 0px;
+background-color: rgba(0, 0, 0, 0);
+float: right;
+}
 }
 .pettagline {
   display: block;
@@ -280,7 +320,6 @@ margin-top: -50px;
 .petinfos {
   width: 100%;
 margin-bottom: 5px;
-margin-top: -30px;
 }
 .petinfos.item {
   display: block;
@@ -292,10 +331,8 @@ margin-top: -30px;
 }
 .petinfos.h5 {
   position: static;
-  display: inline-block;
   width: auto;
-  margin-top: 0px;
-  padding-left: 10px;
+  margin-top: 5px;
   float: none;
   font-family:'Open Sans', sans-serif;
   color: white;
@@ -522,6 +559,8 @@ margin-top: -30px;
   font-weight: 300;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.49) 0px 0px 4px;
+  display: block;
+  letter-spacing: -1px;
 }
 @media (max-width: 991px) {
   .navlateral {
