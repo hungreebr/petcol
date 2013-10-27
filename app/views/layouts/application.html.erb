@@ -21,7 +21,7 @@
     <div class="topbar">
       <%= link_to(image_tag('logomini.png'), root_path, :class => "logo") %>
       <%= link_to "FAZER LOGOUT", logout_path, class: "button buttonuser" %>
-     <%= link_to "CADASTRAR PET", pet_steps_path, class: "button butonmenu" %>
+     <%= link_to "CADASTRAR PET", new_pet_path, class: "button butonmenu" %>
     </div>
 <%=yield%>
 </body>
