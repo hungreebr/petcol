@@ -1,6 +1,6 @@
 class PetStepsController < ApplicationController
 include Wicked::Wizard
-steps :photo
+steps :photo, :tagline
 
   def show
  	@pet = Pet.last

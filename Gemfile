@@ -8,6 +8,7 @@ gem 'paperclip'
 gem 'wicked'
 gem 'carrierwave'
 gem 'jquery-rails'
+gem 'aws-sdk'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

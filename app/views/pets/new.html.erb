@@ -15,7 +15,7 @@
   <div class="form-inputs" style="max-width: 50em;">
   	<% @genders = ['um macho','uma fêmea'] %>
   	<%= f.input :user_id, as: :hidden, input_html: { value: @author_id } %>
-					Meu pet é <%= f.select :gender, @genders %>,<br>da raça <%= f.input_field :breed, label: false, maxlength: 20, size: 15  %>,<br> que atende pelo nome de <%= f.input_field :name, label: false, maxlength: 20, size: 15 %>.
+					Meu pet é <%= f.select :gender, @genders %>,<br>da raça <%= f.input_field :breed, label: false, maxlength: 20, size: 15  %>,<br> que atende pelo nome de <%= f.input_field :name, label: false, maxlength: 20, size: 15 %>,<br> nascido em <%= f.input_field :birthday, label: false %>.
 <br>
 					<div class="nl-submit-wrap">
 						<button class="nl-submit" type="submit">Cadastrar Pet</button>
