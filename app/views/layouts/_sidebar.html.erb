@@ -3,12 +3,12 @@
   <!-- BEGIN MINI-PROFILE -->
    <div class="user-info-wrapper">  
   <div class="profile-wrapper">
-    <img src="assets/img/profiles/avatar.jpg" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" width="69" height="69" />
+    <%= image_tag 'profiles/avatar.jpg', :width => "69", :heigh => "69" %>    
   </div>
     <div class="user-info">
       <div class="greeting">Bem Vindo</div>
-      <div class="username">John <span class="semi-bold">Silva</span></div>
-      <div class="status">Fazer Logout</div>
+      <div class="username"><%= current_user.first_name %> <span class="semi-bold"><%= current_user.last_name %></span></div>
+      <div class="status"><%= link_to 'Fazer Logout', logout_path, :style => 'color: #929fa5;' %></div>
     </div>
    </div>
   <!-- END MINI-PROFILE -->
@@ -20,8 +20,16 @@
    <!-- BEGIN SIDEBAR MENU -->  
   <p class="menu-title">NAVEGAÇÃO</p>
     <ul>  
-      <li class="start active "> <a href="index.html"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> <span class="badge badge-important pull-right">5</span></a> </li>
-    <li class=""> <a href="minha-conta.html"> <i class="icon-user"></i> <span class="title">Minha Conta</span></a> </li> 
+      <li class="start active ">
+        <%= link_to home_path do %>
+          <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span>
+        <% end %>
+      </li>
+      <li class="">
+        <%= link_to edit_user_registration_path do %>
+            <i class="icon-user"></i> <span class="title">Minha Conta</span>
+        <% end %>
+      </li> 
       <li class=""> <a href="javascript:;"> <i class="icon-tags"></i> <span class="title">Minhas Tags</span> <span class="arrow "></span> </a>
         <ul class="sub-menu">
       <li > <a href="comprar-tag.html"> Comprar Tag &nbsp;&nbsp;<span class="label label-warning" style="color: black;">SUCCESSO</span> </a> </li>

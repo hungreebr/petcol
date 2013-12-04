@@ -21,7 +21,7 @@
      <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>     
     </ul>
       <!-- BEGIN LOGO --> 
-      <%= link_to(image_tag 'logo.png', :class => 'logo pull-left', :width= => "130", :height => "92" ) %>      
+      <%= link_to(image_tag 'logo.png', :class => 'logo pull-left', :width => "130", :height => "92" ) %>      
       <!-- END LOGO --> 
       </div>
       <!-- END RESPONSIVE MENU TOGGLER --> 
@@ -41,7 +41,7 @@
     <div class="chat-toggler">  
         <a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom" 
                data-content='
-            <div style="width:300px" class="scroller" data-height="100px">
+            <!-- <div style="width:300px" class="scroller" data-height="100px">
               <div class="notification-messages info">
                   <div class="user-profile">
                     <img src="assets/img/profiles/d.jpg" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
@@ -76,11 +76,11 @@
                 </div>
                 <div class="clearfix"></div>
               </div>  
-            </div>' data-toggle="dropdown" data-original-title="Notificações">
+            </div> -->' data-toggle="dropdown" data-original-title="Notificações">
           <div class="user-details"> 
             <div class="username">
-              <span class="badge badge-important">3</span> 
-              John <span class="bold">Silva</span>                  
+              <span class="badge badge-important">0</span> 
+              <%= current_user.first_name %> <span class="bold"><%= current_user.last_name %></span>                  
             </div>            
           </div> 
           <div class="iconset top-down-arrow"></div>
@@ -96,10 +96,13 @@
           <div class="iconset top-settings-dark "></div>  
         </a>
         <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="dropdownMenu">
-                  <li><a href="user-profile.html"> Minha conta</a>
+                  <li>
+                    <%= link_to 'Minha Conta', edit_user_registration_path %>
                   </li>
                   <li class="divider"></li>                
-                  <li><a href="login.html"><i class="icon-off"></i>&nbsp;&nbsp;Log Out</a></li>
+                  <li>
+                    <i class="icon-off"></i><%= link_to 'Log Out', logout_path, :style => "display: inline-block;" %>
+                  </li>
                </ul>
       </li> 
       <li class="quicklinks"> <!--span class="h-seperate"></span--></li> 
