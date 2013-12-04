@@ -1,28 +1,122 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-  <title>MeuPeludo</title>
-  <%= csrf_meta_tags %>
-  <script>
-   WebFont.load({
-        google: {
-          families: ["Open Sans:300,400,600,700,800","Lato:100,300,400,700,900","PT Sans:400,700","Montserrat:400,700","Montserrat:400,700","Open Sans:300,400,600,700,800","Lato:100,300,400,700,900","PT Sans:400,700","Ubuntu:300,400,500,700"]
-        }
-      });
-    </script>
-<script src="http://www.modernizr.com/downloads/modernizr-2.0.4.js"></script>
-  <%= stylesheet_link_tag    "webflow" %>
-  <%= stylesheet_link_tag    "normalize" %>
-  <%= stylesheet_link_tag    "meupeludov2" %>
-  <%= yield :formstyle %>
-    <%= javascript_include_tag :application %>
+  <meta charset="utf-8" />
+  <title>Área Restrita - Meu Peludo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <%= render partial: "layouts/styles" %>
+  
 </head>
-<body style="height: 100%;">
-    <div class="topbar">
-      <%= link_to(image_tag('logomini.png'), root_path, :class => "logo") %>
-      <%= link_to "FAZER LOGOUT", logout_path, class: "button buttonuser" %>
-     <%= link_to "CADASTRAR PET", new_pet_path, class: "button butonmenu" %>
+
+<body>
+<!-- BEGIN HEADER -->
+<div class="header navbar navbar-inverse "> 
+  <!-- BEGIN TOP NAVIGATION BAR -->
+  <div class="navbar-inner">
+  <div class="header-seperation"> 
+    <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display:none">  
+     <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>     
+    </ul>
+      <!-- BEGIN LOGO --> 
+      <%= link_to(image_tag 'logo.png', :class => 'logo pull-left', :width= => "130", :height => "92" ) %>      
+      <!-- END LOGO --> 
+      </div>
+      <!-- END RESPONSIVE MENU TOGGLER --> 
+      <div class="header-quick-nav" > 
+      <!-- BEGIN TOP NAVIGATION MENU -->
+    <div class="pull-left"> 
+      <ul class="nav quick-section">
+      <li class="quicklinks"> <a href="#" class="" id="layout-condensed-toggle" ><div class="iconset top-menu-toggle-dark"></div> </a> </li>        
+      </ul>
+      <ul class="nav quick-section">
+           <!-- NAVEGECAO TOP ESQUERDA -->
+      </ul>
     </div>
+   <!-- END TOP NAVIGATION MENU -->
+   <!-- BEGIN CHAT TOGGLER -->
+      <div class="pull-right"> 
+    <div class="chat-toggler">  
+        <a href="#" class="dropdown-toggle" id="my-task-list" data-placement="bottom" 
+               data-content='
+            <div style="width:300px" class="scroller" data-height="100px">
+              <div class="notification-messages info">
+                  <div class="user-profile">
+                    <img src="assets/img/profiles/d.jpg" data-src="assets/img/profiles/d.jpg" data-src-retina="assets/img/profiles/d2x.jpg" width="35" height="35">
+                  </div>
+                  <div class="message-wrapper">
+                    <div class="heading">
+                      Promoção Rêlampago
+                    </div>
+                    <div class="description">
+                      Use o código MEUPELUDO e ganhe um cupom de desconto!
+                    </div>
+                    <div class="date pull-left">
+                    1 minuto atrás
+                    </div>                    
+                  </div>
+                  <div class="clearfix"></div>                  
+                </div>  
+              <div class="notification-messages danger">
+                <div class="iconholder">
+                  <i class="icon-warning-sign"></i>
+                </div>
+                <div class="message-wrapper">
+                  <div class="heading">
+                    Preencha novo campo!
+                  </div>
+                  <div class="description">
+                    Adicionamos um novo campo no perfil dos pets, confira!
+                  </div>
+                  <div class="date pull-left">
+                  2 mins atrás
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>  
+            </div>' data-toggle="dropdown" data-original-title="Notificações">
+          <div class="user-details"> 
+            <div class="username">
+              <span class="badge badge-important">3</span> 
+              John <span class="bold">Silva</span>                  
+            </div>            
+          </div> 
+          <div class="iconset top-down-arrow"></div>
+        </a>            
+        <div class="profile-pic"> 
+          <%= image_tag 'profiles/avatar_small.jpg', :width => "35", :heigh => "35" %>
+          
+        </div>            
+      </div>
+     <ul class="nav quick-section ">
+      <li class="quicklinks"> 
+        <a data-toggle="dropdown" class="dropdown-toggle  pull-right" href="#">           
+          <div class="iconset top-settings-dark "></div>  
+        </a>
+        <ul class="dropdown-menu  pull-right" role="menu" aria-labelledby="dropdownMenu">
+                  <li><a href="user-profile.html"> Minha conta</a>
+                  </li>
+                  <li class="divider"></li>                
+                  <li><a href="login.html"><i class="icon-off"></i>&nbsp;&nbsp;Log Out</a></li>
+               </ul>
+      </li> 
+      <li class="quicklinks"> <!--span class="h-seperate"></span--></li> 
+    </ul>
+      </div>
+     <!-- END CHAT TOGGLER -->
+      </div> 
+      <!-- END TOP NAVIGATION MENU --> 
+   
+  </div>
+  <!-- END TOP NAVIGATION BAR --> 
+</div>
+</div>
+<!-- END HEADER -->
+
 <%=yield%>
+
+<%= render partial: "layouts/scripts" %>
 </body>
 </html>
