@@ -114,9 +114,16 @@
 </div>
 </div>
 <!-- END HEADER -->
-
-<%=yield%>
-
+<!-- BEGIN CONTAINER -->
+<div class="page-container row-fluid"> 
+  <%= render partial: "layouts/sidebar" %>
+  <!-- BEGIN PAGE CONTAINER-->
+  <div class="page-content"> 
+    <%=yield%>
+  </div>  
+  <!-- END PAGE --> 
+</div>
+<!-- END CONTAINER --> 
 <%= render partial: "layouts/scripts" %>
 </body>
 </html>
