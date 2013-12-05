@@ -1,7 +1,4 @@
 Petcol::Application.routes.draw do
-
-  devise_for :admins
-
   resources :notices
 
 
@@ -15,6 +12,7 @@ Petcol::Application.routes.draw do
  resources :battles do 
   member { get :vote }
 end
+
 
   devise_for :users
 

@@ -1,4 +1,5 @@
 class NoticesController < ApplicationController
+  before_filter :authenticate_admin!
   # GET /notices
   # GET /notices.json
   def index
