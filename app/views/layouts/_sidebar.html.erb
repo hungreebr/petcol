@@ -32,15 +32,35 @@
       </li> 
       <li class=""> <a href="javascript:;"> <i class="icon-tags"></i> <span class="title">Minhas Tags</span> <span class="arrow "></span> </a>
         <ul class="sub-menu">
-      <li > <a href="comprar-tag.html"> Comprar Tag &nbsp;&nbsp;<span class="label label-warning" style="color: black;">SUCCESSO</span> </a> </li>
-      <li > <a href="ativar-tag.html"> Ativar Tag </a> </li>
-      <li > <a href="historico.html">Histórico de Compras</a> </li>
+      <li > 
+        <%= link_to home_path do %> <!-- EDITAR DEPOIS -->
+          Comprar Tag &nbsp;&nbsp;<span class="label label-warning" style="color: black;">SUCCESSO!</span>
+        <% end %>
+      </li>
+      <li > 
+        <%= link_to home_path do %> <!-- EDITAR DEPOIS -->
+          Ativar Tag
+        <% end %>
+      </li>
+      <li > 
+        <%= link_to home_path do %> <!-- EDITAR DEPOIS -->
+          Histórico de Pedidos
+        <% end %>
+      </li>
         </ul>
       </li>
     <li class=""> <a href="javascript:;"> <i class="icon-heart"></i> <span class="title">Meus Peludos</span> <span class="arrow "></span> </a>
         <ul class="sub-menu">
-          <li > <a href="listar-pets.html">Ver Meus Pets</a> </li>
-          <li > <a href="cadastrar-pet.html">Cadastrar Pet</a> </li>
+          <li > 
+            <%= link_to home_path do %> <!-- EDITAR DEPOIS -->
+              Ver meus Pets
+            <% end %> 
+          </li>
+          <li > 
+            <%= link_to home_path do %> <!-- EDITAR DEPOIS -->
+              Cadastrar Pet
+            <% end %>
+          </li>
         </ul>
       </li>
     <li class="hidden-desktop hidden-phone visible-tablet" id="more-widgets" style="display:" > <a href="javascript:;"> <i class="icon-ellipsis-horizontal"></i></a> 

@@ -1,13 +1,19 @@
 class StaticPagesController < ApplicationController
 
 	def index
-		render :login => 'devise/sessions#new'
-	 end
+		@notices = Notice.all
+		@user = User.find_by_profile_name(params[:id]) || current_user
+		if @user
+			@pets = @user.pets
+		else
+	 		redirect_to login_path
+		end	
+  	end
+
 	def profile
-	
-	 @pet = Pet.all
-			respond_to do |format|
-		format.html # profile.html.erb
+	 	@pet = Pet.all
+		respond_to do |format|
+			format.html # profile.html.erb
+		end
 	end
-end
 end

@@ -23,36 +23,30 @@
               <div class="grid-body" style="border: 0px; border-top: 1px solid #dddddd;">
                 <div class="row-fluid">
                   <ul style="list-style:none">
-                    <li> 
-                      <div class="span12 ">
-                        <div class="pull-left" >
-                          <div style="background-color: black; border-radius: 100px; height: 100px; width: 100px; background-image: url('assets/img/balu.jpg');background-size: cover;margin-top: 5px; display: inline-block; float:left;"></div>
+                    <% if @pets %>
+                      <% @pets.each do |pet| %>
+                        <li> 
+                          <div class="span12 ">
+                            <div class="pull-left" >
+                              <div style="background-color: black; border-radius: 100px; height: 100px; width: 100px; background-image: url('<%= pet.profilepic.url %>');background-size: cover;margin-top: 5px; display: inline-block; float:left;"></div>
 
-                          <div style="float:right;margin-left: 20px;margin-top: 30px;"> ID TAG: 121333<br>
-                            <span class="semi-bold" style="line-height: 30px; font-size: 30px;letter-spacing: -1px;">Balu, <i style="line-height: 30px; font-size: 20px;letter-spacing: -1px;font-weight: 300;">a Lhasa Apso</i></span> 
+                              <div style="float:right;margin-left: 20px;margin-top: 30px;"> ID TAG:  <br>
+                                <span class="semi-bold" style="line-height: 30px; font-size: 30px;letter-spacing: -1px;"><%= pet.name %>, <i style="line-height: 30px; font-size: 20px;letter-spacing: -1px;font-weight: 300;">
+                                  <% if pet.gender == "um macho" %>
+                                        o <%= pet.breed %>
+                                    <% else %>
+                                        a <%= pet.breed %>
+                                  <% end -%></i></span> 
 
-                          </div>  
-                        </div>
-                        <div class="pull-right" >
-                          <button type="button" style="margin-top: 40px; padding-top: 5px;" class="btn btn-primary btn-xs btn-mini btn-danger"><i class="icon-warning-sign" style="font-size:20px"></i><br>Alerta de Desaparecimento</button>
-                        </div>  
-                      </div>   
-                    </li>
-                    <li> 
-                      <div class="span12" style="margin-top: 15px; ">
-                        <div class="pull-left" >
-                          <div style="background-color: black; border-radius: 100px; height: 100px; width: 100px; background-image: url('assets/img/lila.jpg');background-size: cover;margin-top: 5px; display: inline-block; float:left;"></div>
-
-                          <div style="float:right;margin-left: 20px;margin-top: 30px;"> ID TAG: 121333<br>
-                            <span class="semi-bold" style="line-height: 30px; font-size: 30px;letter-spacing: -1px;">Lila, <i style="line-height: 30px; font-size: 20px;letter-spacing: -1px;font-weight: 300;">a Lhasa Apso</i></span> 
-
-                          </div>  
-                        </div>
-                        <div class="pull-right" >
-                          <button type="button" style="margin-top: 40px; padding-top: 5px;" class="btn btn-primary btn-xs btn-mini btn-danger"><i class="icon-warning-sign" style="font-size:20px"></i><br>Alerta de Desaparecimento</button>
-                        </div>  
-                      </div>   
-                    </li>
+                              </div>  
+                            </div>
+                            <div class="pull-right" >
+                              <button type="button" style="margin-top: 40px; padding-top: 5px;" class="btn btn-primary btn-xs btn-mini btn-danger"><i class="icon-warning-sign" style="font-size:20px"></i><br>Alerta de Desaparecimento</button>
+                            </div>  
+                          </div>   
+                        </li>
+                      <%end%>
+                    <%end%>  
                   </ul>
                 </div>
               </div>
@@ -60,7 +54,7 @@
           </div>
         </div>
         <!-- INICIO DA AREA DE PETS DESAPARECIDOS --> 
-        <div class="row-fluid spacing-bottom">
+        <!-- <div class="row-fluid spacing-bottom">
           <div class="span12 tiles white ">
             <div class="no-margin-grid">
             <div class="row-fluid"> 
@@ -117,7 +111,7 @@
               </div>
               </div>
           </div>
-        </div>
+        </div> -->
         <!-- FIM AREA DE PETS DESAPARECIDOS -->       
         
         <div class="row-fluid hidden">
@@ -150,7 +144,7 @@
           <!-- INICIO ATUALIZAÇÕES MEU PELUDO -->       
         <div class="span12">
           <div class="tiles label-warning">
-              <div class="tiles-body">
+            <div class="tiles-body">
               <div class="controller">                
                 <a href="javascript:;" class="reload"></a>
                 <a href="javascript:;" class="remove"></a>                  
@@ -159,46 +153,22 @@
                 ATUALIZAÇÕES NO MEU PELUDO
               </div>              
               </br>
-              <div class="notification-messages info">
-                <div class="user-profile">
-                  <img src="assets/img/profiles/c.jpg" data-src="assets/img/profiles/c.jpg" data-src-retina="assets/img/profiles/c2x.jpg" width="35" height="35">
-                </div>
-                <div class="message-wrapper">
-                  <div class="heading">
-                    Liberada a compra das Tags!!
+              <% @notices.last(3).each do |notice| %>               
+                <div class="notification-messages danger">
+                  <div class="iconholder">
+                    <i class="icon-warning-sign"></i>
                   </div>
-                  <div class="description">
-                    Finalmente já é possível adquirir sua Tag do Meu Peludo
-                  </div>
-                </div>
-              </div>
-              <div class="notification-messages danger">
-                <div class="iconholder">
-                  <i class="icon-warning-sign"></i>
-                </div>
-                <div class="message-wrapper">
-                  <div class="heading">
-                    Sistema em Manutenção
-                  </div>
-                  <div class="description">
-                    Nosso sistema passou por uma manutenção programada
+                  <div class="message-wrapper">
+                    <div class="heading">
+                      <%= notice.title %>
+                    </div>
+                    <div class="description">
+                      <%= notice.text %>
+                    </div>
                   </div>
                 </div>
-              </div>  
-              <div class="notification-messages success">
-                <div class="user-profile">
-                  <img src="assets/img/profiles/h.jpg" data-src="assets/img/profiles/h.jpg" data-src-retina="assets/img/profiles/h2x.jpg" width="35" height="35">
-                </div>
-                <div class="message-wrapper">
-                  <div class="heading">
-                    Integração com Facebook
-                  </div>
-                  <div class="description">
-                    Já está disponível o login com o Facebook
-                  </div>
-                </div>
-              </div>                
-              </div>
+              <% end %>                
+            <div>
           </div>          
         </div>
         <!-- FIM ATUALIZAÇÕES MEU PELUDO -->    

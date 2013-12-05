@@ -1,5 +1,10 @@
 Petcol::Application.routes.draw do
 
+  devise_for :admins
+
+  resources :notices
+
+
   resources :posts
   resources :pet_steps 
 
