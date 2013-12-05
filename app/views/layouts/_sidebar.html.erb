@@ -17,8 +17,26 @@
 
    <!-- END MINI-WIGETS -->
    
-   <!-- BEGIN SIDEBAR MENU -->  
-  <p class="menu-title">NAVEGAÇÃO</p>
+  <!-- BEGIN SIDEBAR MENU -->
+  <% if current_user.admin? %>
+    <!-- INICIO MENU ADMIN-->
+    <p class="menu-title">NAVEGAÇÃO</p>
+    <ul>  
+      <li class="start active ">
+        <%= link_to dashboard_path do %>
+          <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span>
+        <% end %>
+      </li>
+      <li class="start">
+        <%= link_to new_notice_path do %>
+          <i class="icon-custom-home"></i> <span class="title">Cadastrar Notícia</span> <span class="selected"></span>
+        <% end %>
+      </li>
+    </ul>  
+    <!-- FIM MENU ADMIN-->  
+  <% else %>
+  <!-- MENU USUARIO -->
+    <p class="menu-title">NAVEGAÇÃO</p>
     <ul>  
       <li class="start active ">
         <%= link_to home_path do %>
@@ -84,23 +102,26 @@
     </li>    
     </ul>
     <div class="side-bar-widgets">
-  <p class="menu-title">LINK ÚTEIS </p>
-  <div class="status-widget">
-    <div class="status-widget-wrapper">
-      <div class="title"><a href="#">FAQ</a></div>
-      <p>Perguntas mais frequentes</p>
+      <p class="menu-title">LINK ÚTEIS </p>
+      <div class="status-widget">
+        <div class="status-widget-wrapper">
+          <div class="title"><a href="#">FAQ</a></div>
+          <p>Perguntas mais frequentes</p>
+        </div>
+      </div>
+      <div class="status-widget">
+        <div class="status-widget-wrapper">
+          <div class="title"><a href="#">Fale Conosco</a></div>
+          <p>Central de Atendimento</p>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="status-widget">
-    <div class="status-widget-wrapper">
-      <div class="title"><a href="#">Fale Conosco</a></div>
-      <p>Central de Atendimento</p>
-    </div>
-  </div>
-</div>
   <a href="#" class="scrollup">Scroll</a>
   <div class="clearfix"></div>
     <!-- END SIDEBAR MENU --> 
+
+  <% end %>  
+  
   </div>
    <div class="footer-widget">    
   <div class="progress transparent progress-success progress-small no-radius no-margin">

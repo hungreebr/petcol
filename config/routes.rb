@@ -30,7 +30,10 @@ end
   get 'home', to: 'static_pages#index', as: :home
   get 'profile', to: 'profiles#show', as: :profile
 
-  
+  ### ADMIN AREA ###
+  get 'dashboard', to: 'static_pages#dashboard', as: :dashboard
+
+
   #get '/:id', to: 'profiles#show'
   
   # The priority is based upon order of creation:

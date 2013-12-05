@@ -1,5 +1,4 @@
 class StaticPagesController < ApplicationController
-
 	def index
 		@notices = Notice.all
 		@user = User.find_by_profile_name(params[:id]) || current_user
@@ -9,6 +8,10 @@ class StaticPagesController < ApplicationController
 	 		redirect_to login_path
 		end	
   	end
+
+  	def dashboard
+  		render 'static_pages/admin/dashboard'
+  	end	
 
 	def profile
 	 	@pet = Pet.all

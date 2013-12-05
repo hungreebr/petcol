@@ -1,5 +1,5 @@
 class NoticesController < ApplicationController
-  before_filter :authenticate_admin!
+
   # GET /notices
   # GET /notices.json
   def index
@@ -24,12 +24,15 @@ class NoticesController < ApplicationController
 
   # GET /notices/new
   # GET /notices/new.json
-  def new
-    @notice = Notice.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @notice }
+  def new 
+    if current_user.admin?  
+      @notice = Notice.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @notice }
+      end
+    else
+      redirect_to home_path     
     end
   end
 
