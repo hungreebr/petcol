@@ -1,29 +1,97 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <div class="content">
+        <ul class="breadcrumb">
+            <li>
+                <p>HOME</p>
+            </li> 
+            <i class="icon-angle-right"></i> 
+            <li><a href="#" class="active">Minha Conta</a></li>
+        </ul>
+            <div class="page-title">    
+                <i class="icon-left"></i>
+                <h3>Minha <span class="semi-bold">Conta</span></h3>  
+            </div>
+        <!-- INICIO CONTAINER -->     
+        <div id="container">
+            <div class="row-fluid">
+              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+                <%= devise_error_messages! %>
+                <!-- INICIO Primeira parte Formulario -->
+                <div class="span4">
+                    <div class="grid simple ">
+                        <div class="grid-title no-border">
+                          <h3>Dados de <span class="semi-bold">Acesso</span></h3>
+                        </div>
+                        <div class="grid-body no-border"> <br>
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="control-group">
+                                        <label class="control-label">E-mail</label>
+                                        <span class="help">e.x. "nome@email.com"</span>
+                                        <div class="controls">
+                                          <%= f.email_field :email, :class => "span12"%>
+                                        
+                                        </div>
+                                    </div>
+                                <div class="control-group">
+                                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                                    <div>Aguardando confirmação do e-mail: <%= resource.unconfirmed_email %></div>
+                                  <% end %>
+                                    <label class="control-label">Senha</label>
+                                    <span class="help">No mínimo 6 digitos<% if params[:action] == 'edit' %><br>(Deixe em branco caso não queira alterar)<%end%></span>
+                                    <div class="controls">
+                                      <%= f.password_field :password, :autocomplete => "off", :class => "span8" %>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                  <label class="control-label">Confirme a Senha</label>
+                                  <span class="help"></span>
+                                  <div class="controls">
+                                    <%= f.password_field :password_confirmation %>                                
+                                  </div>
+                                <div class="control-group" style="background-color: #D2F12E; text-align:center; color: black; padding: 10px; padding: 5px; margin-top: 10px;">
+                                  <label class="control-label" style="color: black;">Sua Senha Atual</label>
+                                  <span class="help" style="color: #62690B; font-size: 11px;"><br>(Insira sua senha atual para salvar as mudanças)</span>
+                                  <div class="controls">
+                                    <%= f.password_field :password_confirmation %>                                
+                                  </div>
+                                </div>
+                                <div class="control-group">
+                                  
+                                    
+                                </div>    
+                            </div>
+                        <div>
+                    </div> 
+                </div>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+            </div>
+                
+                
+        </div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+    </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+    <div class="pull-right">
+      <%= link_to "Voltar", :back %>
+      <%= f.submit "Atualizar", :class => 'btn btn-primary btn-cons btn-large', :style => 'font-weight: bold; margin-left: 10px;' %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    </div>
+    
+</div>  
+    <div class="span4">
+  <div class="grid simple ">
+      <div class="grid-title no-border">
+        <h3>Cancelar conta?</h3>
+      </div>
+      <div class="grid-body no-border">
+        <p>Insatisfeito com o Meu Peludo? <%= button_to "Clique aqui para excluir sua conta", registration_path(resource_name), :data => { :confirm => "Você tem certeza que deseja excluir sua conta?" }, :method => :delete %>.</p>
+      </div>  
+  </div>
+</div>
+</div>
+</div>  
+</div>
+      <% end %>  
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
 
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>

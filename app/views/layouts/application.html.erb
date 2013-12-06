@@ -21,7 +21,9 @@
      <li class="dropdown"> <a id="main-menu-toggle" href="#main-menu"  class="" > <div class="iconset top-menu-toggle-white"></div> </a> </li>     
     </ul>
       <!-- BEGIN LOGO --> 
-      <%= link_to(image_tag 'logo.png', :class => 'logo pull-left', :width => "130", :height => "92" ) %>      
+      <%= link_to home_path do %>
+        <%= image_tag 'logo.png', :class => 'logo pull-left', :width => "130", :height => "92" %>
+      <% end %>        
       <!-- END LOGO --> 
       </div>
       <!-- END RESPONSIVE MENU TOGGLER --> 

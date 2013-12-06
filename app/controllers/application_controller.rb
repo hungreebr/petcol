@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   		if current_user.admin?
   			dashboard_path
   		else 
-			profile_path
+			home_path
 		end	
 	end
 
