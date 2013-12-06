@@ -365,7 +365,7 @@
 	.widget{
 		margin-right:0px;
 	}
-	.row-fluid.2col [class*="span"]{
+	/*.row-fluid.2col [class*="span"]{
 		width:48% !important;
 		margin:0px;
 		margin-bottom:10px;
@@ -374,7 +374,7 @@
 		width:100% ;
 		margin:0px;
 		margin-bottom:10px;
-	}
+	}*/
 	
 	.column-seperation > div[class*="span"]{
 		border-right:none;		
@@ -387,6 +387,7 @@
 	.user-mini-description h3,.user-mini-description h5{
 		text-align:center;
 	}
+}
 
 @media (max-width: 767px) { 
 	
@@ -738,10 +739,8 @@
 	
 
 @media (max-width: 840px){
-	#Parks.list .meta.region,
-	#Parks.list .meta.rec{
-		display: none;
-	}
+#Parks.list .meta.region,#Parks.list .meta.rec{
+		display: none;}
 }
 
 @media (max-width: 540px){
