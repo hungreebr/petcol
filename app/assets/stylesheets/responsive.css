@@ -1,6 +1,5 @@
 /*** Very Large Screens **/
-@media only screen 
-and (min-width : 1824px) {	
+@media only screen and (min-width : 1824px) {	
 	body { 
 		 font-size:14px;
 
@@ -254,10 +253,7 @@ and (min-width : 1824px) {
 } 
 
 /* Portrait view of all tablet devices */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 	.header-seperation{
 		width:100% !important;
 		display:block !important;
@@ -391,8 +387,6 @@ and (orientation : portrait) {
 	.user-mini-description h3,.user-mini-description h5{
 		text-align:center;
 	}
-
-}
 
 @media (max-width: 767px) { 
 	
@@ -674,10 +668,7 @@ and (orientation : portrait) {
 
 
 /*** Retina Display Images **/
-@media only screen and (-webkit-min-device-pixel-ratio: 2.0),
-       only screen and (min--moz-device-pixel-ratio: 2.0),
-       only screen and (-o-min-device-pixel-ratio: 200/100),
-       only screen and (min-device-pixel-ratio: 2.0) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min--moz-device-pixel-ratio: 2.0),only screen and (-o-min-device-pixel-ratio: 200/100),only screen and (min-device-pixel-ratio: 2.0) {
 		.grid.simple .grid-title .tools a{
   			background: url('../img/icon/portlet-tray-2x.png');
 			background-size: 199px 57px;
