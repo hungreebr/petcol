@@ -10,6 +10,7 @@ class StaticPagesController < ApplicationController
   	end
 
   	def dashboard
+  		@user = User.all
   		render 'static_pages/admin/dashboard'
   	end	
 
