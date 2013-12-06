@@ -736,7 +736,7 @@
 	#Parks.list .meta{
 		width: 150px;
 	}
-	
+}	
 
 @media (max-width: 840px){
 #Parks.list .meta.region,#Parks.list .meta.rec{
