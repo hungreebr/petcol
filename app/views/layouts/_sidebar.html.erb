@@ -18,13 +18,13 @@
    <!-- END MINI-WIGETS -->
    
   <!-- BEGIN SIDEBAR MENU -->
-  <% if current_user.admin? %>
+  <% if current_user.admin %>
     <!-- INICIO MENU ADMIN-->
-    <p class="menu-title">NAVEGAÇÃO</p>
+    <p class="menu-title">ADMINISTRAÇÃO</p>
     <ul>  
-      <li class="start active ">
+      <li class="start">
         <%= link_to dashboard_path do %>
-          <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span>
+          <i class="icon-custom-home"></i> <span class="title">Painel de Controle</span>
         <% end %>
       </li>
       <li class="start">
@@ -34,11 +34,11 @@
       </li>
     </ul>  
     <!-- FIM MENU ADMIN-->  
-  <% else %>
+  <% end %>
   <!-- MENU USUARIO -->
     <p class="menu-title">NAVEGAÇÃO</p>
     <ul>  
-      <li class="start active ">
+      <li class="start">
         <%= link_to home_path do %>
           <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span>
         <% end %>
@@ -119,8 +119,7 @@
   <a href="#" class="scrollup">Scroll</a>
   <div class="clearfix"></div>
     <!-- END SIDEBAR MENU --> 
-
-  <% end %>  
+  
   
   </div>
    <div class="footer-widget">    
