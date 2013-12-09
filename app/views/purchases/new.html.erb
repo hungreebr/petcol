@@ -1,0 +1,57 @@
+<div class="content">
+    <ul class="breadcrumb">
+        <li>
+            <p>HOME</p>
+        </li> 
+        <i class="icon-angle-right"></i> 
+        <li><a href="#">Minhas Tags</a></li>
+        <i class="icon-angle-right"></i> 
+        <li><a href="#" class="active">Comprar Tag</a></li>
+    </ul>
+    <div class="page-title">    
+        <i class="icon-custom-left"></i>
+        <h3>Fazer <span class="semi-bold">Pedido</span></h3>  
+    </div>
+	<div id="container">
+      <div class="row-fluid">
+      	<%= simple_form_for @purchase do |f| %>
+      	<%= f.error_notification %>
+      	<!-- INICIO QUANTIDADE -->
+            <div class="span4">
+              <div class="grid simple">
+                <div class="grid-title no-border">
+                 <h3>Escolha a <span class="semi-bold">Quantidade</span></h3>
+                </div>
+                <div class="grid-body no-border">
+                  <div class="row-fluid">
+                    <div class="span12">
+                      <div style="background-image: url(assets/img/tag_preview.jpg);width: 270px;height: 190px;background-size: contain;margin: auto;" class="span12"></div>
+                    </div>
+                  </div>
+                  <div class="row-fluid">
+                    <div class="span6">
+                      <label><h4 style="margin-bottom: -14px;"> Quantidade </h4></label>
+                      <%= f.input :qtd, :label => false, :input_html => {class: "qtd input-mini"} %> 
+                      
+                    </div>
+                    <div class="span6" style="text-align: center;">
+                      <h4 style="margin-bottom: 10px;"> Preço Unitário</h4>
+                      <%= f.input :price, :as => :hidden, :input_html => { :value => "9.90" } %> 
+                      <h3 style="margin-bottom: 4px;"><span class="bold"> R$ 9,90</span></h3><span class="label label-info">PRÉ-VENDA</span> 
+                    </div>
+                  </div>   
+                </div>
+                <%= f.button :submit %>
+              </div>
+            </div>
+        <%end%>    
+        <!-- FINAL QUANTIDADE -->
+      </div>	
+    </div>  	
+</div>          	
+
+<h1>New purchase</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', purchases_path %>
